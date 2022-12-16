@@ -8,7 +8,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
     return(
-        <div className="container-fluid bg-dark pb-2">
+        <div className="container-fluid bg-secondary">
         
       </div>
     );
