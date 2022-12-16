@@ -5,7 +5,7 @@ import {FcGoogle} from "react-icons/fc";
 const Login = () => {
   return (
     <div className="container-fluid-custom bg-secondary">
-      <div className="row menu-row mx-auto">
+      <div className="menu-row mx-auto">
         <div className="col-md-6 col-6 text-center">
           <button className="menu-button active">SIGN UP</button>
         </div>
@@ -13,12 +13,12 @@ const Login = () => {
           <button className="menu-button">SIGN IN</button>
         </div>
       </div>
-      <div className="row mx-auto">
-        <div className="col-md-6 col-12 mx-auto">
+      <div className="input-row mx-auto bg-white">
+        <div className="col-md-12 col-12 mx-auto">
           <div className="row mx-auto">
-            <div className="col-md-3 col-3 border social-button">
-            <FcGoogle className="google-icon"/>
-            h
+            <div className="col-md-5 col-5 border rounded social-button">
+            <FcGoogle className="google-icon" size={30}/>
+                <span className="social-text ps-2">Continue with Google</span>
             </div>
           </div>
         </div>
