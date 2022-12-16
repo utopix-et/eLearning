@@ -1,3 +1,7 @@
+.container-fluid-custom{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 .menu-row{
     display: flex;
     width: 40%;
@@ -7,7 +11,7 @@
     padding: 0 1.25rem;
     height: 3.75rem;
     background: #fff;
-    box-shadow: 0 0 .625rem rgba(0,0,0,0.1); 
+    box-shadow: 0 0 .625rem rgba(0,0,0,0.1);
 }
 .menu-row .menu-button{
     border: none;
