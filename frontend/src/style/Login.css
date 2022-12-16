@@ -1,3 +1,6 @@
+.container-fluid{
+    padding-bottom: 5px;
+}
 .container-fluid-custom {
   margin-top: 1rem;
   padding-bottom: 5rem;
@@ -55,7 +58,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .menu-row {
+    .container-fluid{
+        padding-bottom: 17px;
+    }
+    .menu-row {
     width: 100%;
     flex-direction: row;
     justify-content: center;
