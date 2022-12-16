@@ -4,11 +4,11 @@ const Login = () => {
     return(
         <div className="container-fluid bg-secondary">
             <div className="row w-50 bg-warning mx-auto">
-                <div className="col-6">
-                    <h1>Left Side</h1>
+                <div className="col-6 bg-primary mx-auto">
+                    <button>Left Side</button>
                 </div>
                 <div className="col-6">
-                    <h1>Right Side</h1>
+                    <button>Right Side</button>
                 </div>
             </div>
         </div>
