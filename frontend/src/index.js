@@ -9,7 +9,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
     return(
-        <div className="container-fluid bg-secondary py-5">
+        <div className="container-fluid bg-secondary">
             <Login/>
       </div>
     );
