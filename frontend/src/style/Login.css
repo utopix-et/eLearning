@@ -4,10 +4,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    height: 60px;
+    padding: 0 1.25rem;
+    height: 3.75rem;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    box-shadow: 0 0 .625rem rgba(0,0,0,0.1); 
 }
 .menu-row .menu-button{
     border: none;
@@ -17,16 +17,25 @@
 .menu-row .menu-button:hover{
     color: #000;
 }
+.menu-row .menu-button:focus{
+    outline: none;
+}
+.menu-row .menu-button.active{
+    color: gray;
+    margin-top: .3125rem;
+    padding-bottom: .3125rem;
+    border-bottom: .125rem solid blue;
+}
 
 @media screen and (max-width: 768px){
     .menu-row{
         width: 100%;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 100%;
     }
     .menu-row .menu-button{
-        margin: 10px 0;
+        margin: .625rem 0;
     }
 }
