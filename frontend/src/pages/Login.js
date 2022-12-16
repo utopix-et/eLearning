@@ -5,8 +5,9 @@ import { BsGithub } from "react-icons/bs";
 
 const Login = () => {
   return (
-    <div className="container-fluid-custom bg-secondary">
-      <div className="menu-row mx-auto">
+    <div className="container-fluid mx-auto">
+    <div className="container-fluid-custom mx-auto">
+      <div className="menu-row mx-auto bg-white">
         <div className="col-md-6 col-6 text-center">
           <button className="menu-button active">SIGN UP</button>
         </div>
@@ -28,6 +29,10 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <div className="mx-auto text-center mt-3 bg-white">
+      Or
+      </div>
+    </div>
     </div>
   );
 };

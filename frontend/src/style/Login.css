@@ -1,10 +1,12 @@
 .container-fluid-custom {
-  padding-top: 5rem;
+  margin-top: 3rem;
   padding-bottom: 5rem;
+  background: #fff;
+  width: 40%;
 }
 .menu-row {
   display: flex;
-  width: 40%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +34,7 @@
 }
 .input-row {
   display: flex;
-  width: 40%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +47,7 @@
   padding-bottom: 3.75rem;
 }
 .social-button {
-  border: .0625rem solid #000;
+  border: 0.0625rem solid #000;
   background: none;
   color: gray;
   margin-top: 2.5rem;
