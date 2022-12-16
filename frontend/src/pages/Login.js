@@ -1,6 +1,7 @@
 import React from "react";
 import '../style/Login.css';
-import 'font-awesome/css/font-awesome.min.css';
+import google from '../assets/icons/google.svg';
+import github from '../assets/icons/github.svg';
 
 const Login = () => {
     return(
@@ -17,7 +18,7 @@ const Login = () => {
                 <div className="col-md-6 col-12 mx-auto">
                     <div className="row mx-auto">
                         <div className="col-md-3 col-3 mx-auto">
-                        <i class="fa-brands fa-google"></i>
+                        <img src={google} alt="google" className="icon"/>
                             </div>
                             </div>
                             </div></div>
