@@ -1,5 +1,5 @@
 .container-fluid-custom {
-  margin-top: 3rem;
+  margin-top: 1rem;
   padding-bottom: 5rem;
   background: #fff;
   width: 40%;
@@ -41,8 +41,6 @@
   padding: 0;
   height: 3.75rem;
   background: #fff;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-  margin-top: 1.25rem;
   padding-top: 1.25rem;
   padding-bottom: 3.75rem;
 }
