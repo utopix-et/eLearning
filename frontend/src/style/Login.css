@@ -32,7 +32,7 @@
   padding-bottom: 0.3125rem;
   border-bottom: 0.125rem solid blue;
 }
-.input-row {
+.social-row {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -65,7 +65,13 @@
   .menu-row .menu-button {
     margin: 0.625rem 0;
   }
-  .input-row {
+  .container-fluid-custom {
+    margin-top: 1rem;
+    padding-bottom: 5rem;
+    background: #fff;
+    width: 100%;
+  }
+  .social-row {
     width: 100%;
     flex-direction: row;
     justify-content: center;

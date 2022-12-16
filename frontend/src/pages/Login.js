@@ -16,7 +16,7 @@ const Login = () => {
       </div>
       
     <div className="container-fluid-custom mx-auto">
-      <div className="input-row mx-auto bg-white">
+      <div className="social-row mx-auto bg-white">
         <div className="col-md-12 col-12 mx-auto">
           <div className="row mx-auto">
             <div className="col-md-5 col-10 rounded social-button btn">
@@ -33,6 +33,7 @@ const Login = () => {
       <div className="mx-auto text-center mt-3 bg-white">
       Or
       </div>
+      
     </div>
     </div>
   );
