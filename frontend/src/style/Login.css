@@ -41,7 +41,7 @@
   padding: 0;
   height: 3.75rem;
   background: #fff;
-  padding-top: 1.25rem;
+  padding-top: 2rem;
   padding-bottom: 3.75rem;
 }
 .social-button {
@@ -81,4 +81,13 @@
     padding: 0;
     padding-bottom: 2rem;
   }
+    .social-button {
+        
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding-left: 2px;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+ 
 }
