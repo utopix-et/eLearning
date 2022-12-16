@@ -45,7 +45,7 @@
   padding-bottom: 3.75rem;
 }
 .social-button {
-  border: none;
+  border: .0625rem solid #000;
   background: none;
   color: gray;
   margin-top: 2.5rem;
