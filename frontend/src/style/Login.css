@@ -1,5 +1,32 @@
-.menu-button{
+.menu-row{
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+.menu-row .menu-button{
     border: none;
     background: none;
     color: gray;
+}
+.menu-row .menu-button:hover{
+    color: #000;
+}
+
+@media screen and (max-width: 768px){
+    .menu-row{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .menu-row .menu-button{
+        margin: 10px 0;
+    }
 }
