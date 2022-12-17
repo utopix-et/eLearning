@@ -1,6 +1,6 @@
 import React from "react";
 import Logo  from "../assets/Logo/logo.png";
-import "../style/Login.css";
+import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
