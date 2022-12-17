@@ -45,7 +45,7 @@ const Login = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Email"
+                  placeholder="Student ID Number (Example - ETS1242/13)"
                 />
               </div>
               <div className="col-md-10 col-12 mx-auto my-4">
