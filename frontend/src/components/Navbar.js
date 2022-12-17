@@ -1,7 +1,8 @@
 import React from "react";
 import Logo from "../assets/Logo/logo.png";
 import "../style/Navbar.css";
-import {BsChevronDown} from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
+
 
 const Navbar = () => {
   return (
@@ -35,9 +36,31 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Roadmap
-                </a>
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Dropdown link
+                  </a>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </div>
+                </div>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -47,10 +70,13 @@ const Navbar = () => {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <button className="btn btn-primary text-white nav-link px-3 text-center" href="#">
+                <button
+                  className="btn btn-primary text-white nav-link px-3 text-center"
+                  href="#"
+                >
                   Tinsaye Simeneh
-                    <BsChevronDown className="bg-none text-white ms-2"/>
-                  </button>
+                  <BsChevronDown className="bg-none text-white ms-2" />
+                </button>
               </li>
             </ul>
           </div>
