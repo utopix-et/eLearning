@@ -13,7 +13,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
     return(
         <div className="container-fluid bg-light">
-            <Signup/>
+            <Navbar/>
       </div>
     );
 }
