@@ -52,6 +52,14 @@ const Login = () => {
                 <input
                   type="text"
                   className="form-control"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div className="col-md-10 col-12 mx-auto my-4">
+                <input
+                  type="text"
+                  className="form-control"
                   placeholder="Password"
                 />
               </div>
