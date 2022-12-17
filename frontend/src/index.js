@@ -12,8 +12,8 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
     return(
-        <div className="container-fluid bg-secondary">
-            <Navbar/>
+        <div className="container-fluid bg-light">
+            <Signup/>
       </div>
     );
 }
