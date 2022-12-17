@@ -49,7 +49,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <button className="btn btn-primary text-white nav-link px-3 text-center" href="#">
                   Tinsaye Simeneh
-                    <BsChevronDown className="bg-primary text-white ms-2"/>
+                    <BsChevronDown className="bg-none text-white ms-2"/>
                   </button>
               </li>
             </ul>
