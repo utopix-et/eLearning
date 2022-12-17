@@ -5,13 +5,15 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Navbar from "./components/Navbar";
+
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
 function App() {
     return(
         <div className="container-fluid bg-secondary">
-            <Signup/>
+            <Navbar/>
       </div>
     );
 }
