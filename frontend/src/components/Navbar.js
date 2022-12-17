@@ -3,7 +3,6 @@ import Logo from "../assets/Logo/logo.png";
 import "../style/Navbar.css";
 import { BsChevronDown } from "react-icons/bs";
 
-
 const Navbar = () => {
   return (
     <div className="container-fluid mx-auto py-3">
@@ -36,32 +35,16 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <div class="dropdown">
-                  <a
-                    class="btn btn-secondary dropdown-toggle"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Dropdown link
-                  </a>
-
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">
-                      Action
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </div>
-                </div>
-              </li>
+              <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+  </div>
+                </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Assessment
