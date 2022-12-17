@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'popper.js/dist/popper.min.js';
-import 'bootstrap/dist/js/bootstrap.min.js';
 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
