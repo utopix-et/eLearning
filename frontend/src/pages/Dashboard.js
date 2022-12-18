@@ -22,10 +22,10 @@ const Dashboard = () => {
       
       <div className="row pb-5 pt-4">
         <div className="col-md-3 col-12">
-          <Cards img={img1} levelIcon="Beginner" Title="Frontend Foundation HTML + CSS"/>
+          <Cards img={img1} levelIcon="Beginner" Title="Frontend Foundation HTML + CSS" BadgeText="Passed"/>
         </div>
         <div className="col-md-3 col-12 ms-5">
-          <Cards img={img2} levelIcon="Intermediate" Title="Javascript for Developer"/>
+          <Cards img={img2} levelIcon="Intermediate" Title="Javascript for Developer" BadgeText="On Progress"/>
         </div>
       </div>
       
