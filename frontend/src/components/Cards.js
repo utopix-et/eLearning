@@ -17,7 +17,7 @@ const Cards = ({ img, levelIcon, Title }) => {
 
   return (
     <>
-      <div className="card">
+      <div className="card shadow-lg">
         <img src={img} className="card-img-top" alt="frontend-foundation-img" />
         <div className="card-body">
           <h5 className="card-title">{Title}</h5>

@@ -14,7 +14,7 @@ const Dashboard = () => {
         <h3>Dashboard</h3>
       </div>
 
-      <div className="row Main-row p-4">
+      <div className="row Main-row p-4 mx-3">
         <div className="row py-2">
         <h3>My Courses</h3>
         
