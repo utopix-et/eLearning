@@ -1,6 +1,6 @@
 import React from "react";
 
-import img1 from "../assets/Images/courseImages/1.jpg";
+import img1 from "../assets/Images/CourseImages/1.jpg";
 import {GoPrimitiveDot} from "react-icons/go";
 
 import "../style/Dashboard.css";
@@ -8,15 +8,15 @@ import "../style/Dashboard.css";
 const Dashboard = () => {
   return (
     <>
-      <div className="row bg-primary text-center py-5">
+      <div className="row text-center pb-5 pt-4">
         <h3>Dashboard</h3>
       </div>
-      <div className="row bg-warning py-3">
-        <div className="col-3">
+        <div className="card-row p-4">
+        <div className="col-md-3 col-12">
           <div className="card">
-                <img src="https://images.unsplash.com/photo-1617720000000-1c1c1c1c1c1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" className="card-img-top" alt="..." />
+                <img src={img1} className="card-img-top" alt="frontend-foundation-img" />
             <div className="card-body">
-              <h5 className="card-title bg-dark">
+              <h5 className="card-title">
                 Frontend Foundation HTML + CSS
               </h5>
               <div className="py-2">
