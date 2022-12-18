@@ -9,7 +9,7 @@ const courseController = {
     }),
     getCourse: asyncHandler(async (req, res) => {
         const {courseId} = req.params;
-        const course = await CourseModel.findById(courseId);
+        const course = await CourseModel.findById(courseId).populate("sections");
         res.json(course);
     }),
     createCourse: asyncHandler(async (req, res) => {
@@ -24,6 +24,7 @@ const courseController = {
             courseId,
             {title},
         )
+        res.json(course);
     }),
     deleteCourse: asyncHandler(async (req, res) => {
         const {courseId} = req.params;
@@ -38,7 +39,7 @@ const courseController = {
     }),
     getSection: asyncHandler(async (req, res) => {
         const {sectionId} = req.params;
-        const section = await SectionModel.findById(sectionId);
+        const section = await SectionModel.findById(sectionId).populate("lessons");
         res.json(section);
     }),
     createSection: asyncHandler(async (req, res) => {
@@ -47,7 +48,14 @@ const courseController = {
         const section = await SectionModel.create({
             title,
             course: courseId
+        }).then(section => {
+            return CourseModel.findByIdAndUpdate(courseId, {
+                $push: {
+                    sections: section._id
+                }
+            })
         });
+        
         res.json(section);
     }),
     updateSection: asyncHandler(async (req, res) => {
@@ -60,7 +68,13 @@ const courseController = {
     }),
     deleteSection: asyncHandler(async (req, res) => {
         const {sectionId} = req.params;
-        const section = await SectionModel.findByIdAndDelete(id);
+        const section = await SectionModel.findByIdAndDelete(sectionId).then(section => {
+            return CourseModel.findByIdAndUpdate(section.course, {
+                $pull: {
+                    sections: section._id
+                }
+            })
+        });
         res.json(section);
     }),
     getLessons: asyncHandler(async (req, res) => {
@@ -84,6 +98,13 @@ const courseController = {
             blogLink,
             description,
             section: sectionId
+        }).then(lesson => {
+            return SectionModel.findByIdAndUpdate
+                (sectionId, {
+                    $push: {
+                        lessons: lesson._id
+                    }
+                })
         });
         res.json(lesson);
     }),

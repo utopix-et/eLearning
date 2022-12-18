@@ -1,8 +1,8 @@
 const route = require('express').Router();
 const courseController = require('./controller');
 
-route.get('/', courseController.getAllCourses);
-route.post('/:courseId', courseController.createCourse);
+route.get('/', courseController.getCourses);
+route.post('/', courseController.createCourse);
 route.get('/:courseId', courseController.getCourse);
 route.put('/:courseId', courseController.updateCourse);
 route.delete('/:courseId', courseController.deleteCourse);
