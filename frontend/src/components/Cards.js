@@ -1,5 +1,6 @@
 import React from "react";
 import {GoPrimitiveDot} from "react-icons/go";
+import {WiMoonWaningCrescent1} from "react-icons/wi";
 
 const Cards = ({ img, levelIcon }) => {
   if (!img) {
@@ -14,15 +15,13 @@ function Icon (){
     }
     else{
         return(
-            <GoPrimitiveDot className="text-success"/>
+            <WiMoonWaningCrescent1 className="text-success"/>
           )
     }
   }
 
   return (
     <>
-      <div className="card-row p-4">
-        <div className="col-md-3 col-12">
           <div className="card">
             <img
               src={img}
@@ -40,8 +39,6 @@ function Icon (){
                 the bulk of the card's content.
               </p>
             </div>
-          </div>
-        </div>
       </div>
     </>
   );
