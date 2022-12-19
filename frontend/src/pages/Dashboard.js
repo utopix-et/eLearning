@@ -1,6 +1,6 @@
 import React from "react";
 
-import Cards from "../components/Cards";
+import Cards from "../components/DashboardCard";
 
 import img1 from "../assets/Images/CourseImages/1.jpg";
 import img2 from "../assets/Images/CourseImages/2.jpg";
