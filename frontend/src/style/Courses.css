@@ -9,3 +9,13 @@
     align-items: center;
     background-color: white;
 }
+@media (max-width: 768px) {
+    .Main-row{
+        flex-direction: column;
+    }
+    .custom-card{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+}
