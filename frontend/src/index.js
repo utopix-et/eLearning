@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 
 require('jquery')
 require('bootstrap')
@@ -17,7 +18,7 @@ function App() {
     return(
         <div className="container-fluid bg-light">
             <Navbar/>
-            <Dashboard/>
+            <Profile/>
       </div>
     );
 }
