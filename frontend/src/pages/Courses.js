@@ -66,6 +66,29 @@ const Courses = () => {
             />
           </div>
         </div>
+
+        <div className="row">
+          <h5>Designing Courses</h5>
+        </div>
+
+        <div className="row pb-5 pt-4">
+          <div className="col-md-3 col-12 custom-card">
+            <Cards
+              img={img6}
+              levelIcon="Beginner"
+              Title="Intro to UI/UX Design"
+            />
+          </div>
+          <div className="col-md-3 col-12 custom-card">
+            <Cards
+              img={img6}
+              levelIcon="Intermediate"
+              Title="UI/UX Design for Developers"
+              BadgeText="Coming Soon"
+            />
+          </div>
+        </div>
+
       </div>
     </>
   );
