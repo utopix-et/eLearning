@@ -12,6 +12,10 @@
 .text-orange{
     color: #ff8c00;
 }
+.card-row{
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+}
 @media (max-width: 768px) {
     .Main-row{
         flex-direction: column;
@@ -20,5 +24,9 @@
         width: 100%;
         margin-left: 0;
         margin-top: 2rem;
+    }
+    .card-row{
+        padding-top: 0rem;
+        padding-bottom: 0.8rem;
     }
 }

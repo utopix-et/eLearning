@@ -20,7 +20,7 @@ const Courses = () => {
           <h5>Programming Courses</h5>
         </div>
 
-        <div className="row pb-5 pt-4">
+        <div className="row card-row">
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img1}
@@ -48,7 +48,7 @@ const Courses = () => {
           </div>
         </div>
 
-        <div className="row pb-5 pt-4">
+        <div className="row card-row">
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img5}
@@ -67,11 +67,11 @@ const Courses = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row pt-3">
           <h5>Designing Courses</h5>
         </div>
 
-        <div className="row pb-5 pt-4">
+        <div className="row card-row pb-4">
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img6}
