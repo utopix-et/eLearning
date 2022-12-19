@@ -2,7 +2,7 @@ import React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
 import { WiMoonWaningCrescent1 } from "react-icons/wi";
 
-const DashboardCards = ({ img, levelIcon, Title, BadgeText }) => {
+const CourseCards = ({ img, levelIcon, Title, BadgeText }) => {
   if (!img) {
     return <h1>Image not found</h1>;
   }
@@ -36,4 +36,4 @@ const DashboardCards = ({ img, levelIcon, Title, BadgeText }) => {
   );
 };
 
-export default DashboardCards;
+export default CourseCards;
