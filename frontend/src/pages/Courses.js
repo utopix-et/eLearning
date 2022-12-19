@@ -1,6 +1,6 @@
 import React from "react";
 
-import Cards from "../components/DashboardCard";
+import Cards from "../components/CourseCard";
 
 import img1 from "../assets/Images/CourseImages/1.jpg";
 import img2 from "../assets/Images/CourseImages/2.jpg";
@@ -39,7 +39,31 @@ const Courses = () => {
             <Cards img={img3} levelIcon="Beginner" Title="Backend Basics" />
           </div>
           <div className="col-md-3 col-12 custom-card">
-            <Cards img={img3} levelIcon="Beginner" Title="Backend Basics" />
+            <Cards
+              img={img4}
+              levelIcon="Advanced"
+              Title="Advanced CSS + JavaScript"
+              BadgeText="Coming Soon"
+            />
+          </div>
+        </div>
+
+        <div className="row pb-5 pt-4">
+          <div className="col-md-3 col-12 custom-card">
+            <Cards
+              img={img5}
+              levelIcon="Advanced"
+              Title="API Development"
+              BadgeText="Coming Soon"
+            />
+          </div>
+          <div className="col-md-3 col-12 custom-card">
+            <Cards
+              img={img2}
+              levelIcon="Advanced"
+              Title="Introduction to React"
+              BadgeText="Coming Soon"
+            />
           </div>
         </div>
       </div>

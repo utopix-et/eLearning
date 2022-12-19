@@ -9,6 +9,9 @@
     align-items: center;
     background-color: white;
 }
+.text-orange{
+    color: #ff8c00;
+}
 @media (max-width: 768px) {
     .Main-row{
         flex-direction: column;

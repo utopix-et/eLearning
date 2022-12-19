@@ -1,7 +1,9 @@
 import React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
 import { WiMoonWaningCrescent1 } from "react-icons/wi";
+import {BsFillTriangleFill} from 'react-icons/bs';
 
+import "../style/Courses.css";
 const CourseCards = ({ img, levelIcon, Title, BadgeText }) => {
   if (!img) {
     return <h1>Image not found</h1>;
@@ -11,8 +13,12 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText }) => {
     if (levelIcon === "Beginner") {
       return <GoPrimitiveDot className="text-success me-1" />;
     } else {
-      return <WiMoonWaningCrescent1 className="text-warning me-2" style = {{transform: 'rotate(90deg)' }} />;
-    }
+      if (levelIcon === "Intermediate") {
+        return <WiMoonWaningCrescent1 className="text-orange me-2" style = {{transform: 'rotate(90deg)' }}/>;
+      }
+      else{
+      return <BsFillTriangleFill className="text-warning me-2 mb-1"  />;
+    }}
   }
 
   return (
