@@ -6,12 +6,12 @@ const DAL = require("../../../common/dal"),
   UserDAL = DAL(userModel);
 const jwtGen = require("../../../helpers/jwtGen");
 const createUser = asyncHandler(async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
-  if (!firstName || !lastName || !email || !password) {
+  const { firstname, lastname, email, password } = req.body;
+  if (!firstname || !lastname || !email || !password) {
     res.statusCode = 400;
     throw new Error(
-      `Fields: ${firstName ? "" : "Firstname, "}${
-        lastName ? "" : "lastname, "
+      `Fields: ${firstname ? "" : "firstname, "}${
+        lastname ? "" : "lastname, "
       }${email ? "" : "email, "}${password ? "" : "password"} should be filled.`
     );
   }
@@ -23,8 +23,8 @@ const createUser = asyncHandler(async (req, res) => {
   }
 
   const newUser = await UserDAL.createOne({
-    firstName,
-    lastName,
+    firstname,
+    lastname,
     email,
     password,
   });
@@ -32,13 +32,12 @@ const createUser = asyncHandler(async (req, res) => {
   const { password: userPassword, ...userDetails } = newUser._doc;
   const refreshToken = await jwtGen(userDetails._id, true);
   const accessToken = await jwtGen(userDetails._id);
-
+  res.tokens = {
+    refreshToken,
+    accessToken,
+  };
   res.status(201).json({
     userDetails,
-    tokens: {
-      refreshToken,
-      accessToken,
-    },
   });
 });
 
@@ -61,12 +60,12 @@ const login = asyncHandler(async (req, res) => {
   const { password: userPassword, ...userDetails } = userExists._doc;
   const refreshToken = await jwtGen(userDetails._id, true);
   const accessToken = await jwtGen(userDetails._id);
+  res.tokens = {
+    refreshToken,
+    accessToken,
+  };
   res.status(200).json({
     userDetails,
-    tokens: {
-      refreshToken,
-      accessToken,
-    },
   });
 });
 module.exports = {
