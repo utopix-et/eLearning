@@ -25,7 +25,7 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText }) => {
     <>
       <div className="card shadow-lg">
         <img src={img} className="card-img-top" alt="frontend-foundation-img" />
-        <span className="badge bg-warning text-white position-absolute top-50 bottom-45 start-60 end-0">{BadgeText}</span>
+        <span className="badge bg-warning text-white position-absolute bottom-50 start-60 end-0 mb-3">{BadgeText}</span>
         <div className="card-body">
           <h5 className="card-title">{Title}</h5>
           <div className="py-2">
@@ -36,6 +36,18 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText }) => {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
+          <div className="d-flex justify-content-between">
+            <div className="d-flex">
+              <img
+                src="https://images.unsplash.com/photo-1620922470003-8b8b2b2b2b1f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                className="rounded-circle"
+                alt="profile-img"
+                width="30px"
+                height="30px"
+              />
+              <p className="ms-2">John Doe</p>
+              </div>
+              </div>
         </div>
       </div>
     </>
