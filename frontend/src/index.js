@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Courses from "./pages/Courses";
 import Roadmap from "./pages/Roadmap";
+import Footer from "./components/Footer";
 
 require('jquery')
 require('bootstrap')
@@ -20,7 +21,8 @@ function App() {
     return(
         <div className="container-fluid bg-light">
             <Navbar/>
-            <Roadmap/>
+            <Courses/>
+            <Footer/>
       </div>
     );
 }
