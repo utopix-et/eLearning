@@ -16,7 +16,7 @@ const Roadmap = () => {
     <>
       <div className="row Main-row p-4 mx-3">
         <div className="row">
-          <h5>Programming Courses</h5>
+          <h5>Course Roadmaps</h5>
         </div>
 
         <div className="row card-row">
