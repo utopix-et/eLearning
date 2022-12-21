@@ -7,11 +7,18 @@ import {AiOutlineDownload} from 'react-icons/ai';
 import Yidnek from "../assets/Images/Instructer/yidnek.jpg";
 
 import "../style/Courses.css";
-const CourseCards = ({ img, levelIcon, Title, BadgeText, description }) => {
+const CourseCards = ({ img, levelIcon, Title, BadgeText, description, DownloadbtnState }) => {
   if (!img) {
     return <h1>Image not found</h1>;
   }
 
+if(DownloadbtnState===true){
+  document.getElementById("download-btn").style.display = "block";
+}
+else{
+  document.getElementById("download-btn").style.display = "none";
+}
+    
   function Icon() {
     if (levelIcon === "Beginner") {
       return <GoPrimitiveDot className="text-success me-1" />;
@@ -48,6 +55,12 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText, description }) => {
                 height="30px"
               />
               <p className="ms-2">John Doe</p>
+              </div>
+              <div className="d-flex">
+              <span id="download-btn">
+                <AiOutlineDownload className="text-success me-1" />
+                Download
+              </span>
               </div>
               </div>
         </div>
