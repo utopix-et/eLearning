@@ -27,7 +27,7 @@ const Courses = () => {
               Title="Frontend Foundation HTML + CSS"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -37,7 +37,7 @@ const Courses = () => {
               Title="Javascript for Developer"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -47,7 +47,7 @@ const Courses = () => {
               Title="Backend Basics"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -58,7 +58,7 @@ const Courses = () => {
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
         </div>
@@ -72,8 +72,8 @@ const Courses = () => {
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
-            />
+              DownloadbtnState="d-none"
+                          />
           </div>
           <div className="col-md-3 col-12 custom-card">
             <Cards
@@ -83,7 +83,7 @@ const Courses = () => {
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ const Courses = () => {
               Title="Intro to UI/UX Design"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -111,7 +111,7 @@ const Courses = () => {
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState={false}
+              DownloadbtnState="d-none"
             />
           </div>
         </div>

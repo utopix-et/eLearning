@@ -11,13 +11,6 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText, description, Downloadbt
   if (!img) {
     return <h1>Image not found</h1>;
   }
-
-if(DownloadbtnState===true){
-  document.getElementById("download-btn").style.display = "block";
-}
-else{
-  document.getElementById("download-btn").style.display = "none";
-}
     
   function Icon() {
     if (levelIcon === "Beginner") {
@@ -56,7 +49,7 @@ else{
               />
               <p className="ms-2">John Doe</p>
               </div>
-              <div className="d-flex">
+              <div className={DownloadbtnState}>
               <span id="download-btn">
                 <AiOutlineDownload className="text-success me-1" />
                 Download
