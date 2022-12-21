@@ -1,10 +1,12 @@
 const express = require("express"),
   mongoose = require("mongoose"),
   router = require("./common/routes"),
-  dotenv = require("./common/env");
+  dotenv = require("dotenv");
 const logger = require("./common/logger"),
   errorHandler = require("./middlewares/errorHandler");
+dotenv.config();
 
+console.log(process.env.MONGODB_URL);
 mongoose.connection.on("connecting", function () {
   logger.info("trying to establish a connection to mongo");
 });
