@@ -22,6 +22,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+let original = express.response.json;
 express.response.json = async function (obj) {
   // logger.info("this is getting called");
   if (this.tokens) {

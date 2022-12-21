@@ -1,5 +1,3 @@
-const { model } = require("mongoose");
-
 const getOne = (model) => {
   return async (props) => {
     const response = await model.findOne(props, { password: 0 });
@@ -36,7 +34,7 @@ const deleteOne = (model) => async (filter) => {
 };
 const dataAccessLayer = (model) => ({
   getOne: getOne(model),
-  getMany: getAll(model),
+  getAll: getAll(model),
   createOne: createOne(model),
   updateOne: updateOne(model),
   deleteOne: deleteOne(model),
