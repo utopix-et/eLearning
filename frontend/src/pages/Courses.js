@@ -8,7 +8,6 @@ import img3 from "../assets/Images/CourseImages/3.jpg";
 import img4 from "../assets/Images/CourseImages/4.jpg";
 import img5 from "../assets/Images/CourseImages/5.jpg";
 import img6 from "../assets/Images/CourseImages/6.jpg";
-import img7 from "../assets/Images/CourseImages/7.jpg";
 
 import "../style/Courses.css";
 
@@ -26,6 +25,8 @@ const Courses = () => {
               img={img1}
               levelIcon="Beginner"
               Title="Frontend Foundation HTML + CSS"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -33,10 +34,18 @@ const Courses = () => {
               img={img2}
               levelIcon="Intermediate"
               Title="Javascript for Developer"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
-            <Cards img={img3} levelIcon="Beginner" Title="Backend Basics" />
+            <Cards
+              img={img3}
+              levelIcon="Beginner"
+              Title="Backend Basics"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
+            />
           </div>
           <div className="col-md-3 col-12 custom-card">
             <Cards
@@ -44,6 +53,8 @@ const Courses = () => {
               levelIcon="Advanced"
               Title="Advanced CSS + JavaScript"
               BadgeText="Coming Soon"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
         </div>
@@ -55,6 +66,8 @@ const Courses = () => {
               levelIcon="Advanced"
               Title="API Development"
               BadgeText="Coming Soon"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -63,6 +76,8 @@ const Courses = () => {
               levelIcon="Advanced"
               Title="Introduction to React"
               BadgeText="Coming Soon"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
         </div>
@@ -77,6 +92,8 @@ const Courses = () => {
               img={img6}
               levelIcon="Beginner"
               Title="Intro to UI/UX Design"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -85,10 +102,11 @@ const Courses = () => {
               levelIcon="Intermediate"
               Title="UI/UX Design for Developers"
               BadgeText="Coming Soon"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
             />
           </div>
         </div>
-
       </div>
     </>
   );
