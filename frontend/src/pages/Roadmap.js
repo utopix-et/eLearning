@@ -53,10 +53,9 @@ const Roadmap = () => {
           </div>
           <div className="col-md-3 col-12 custom-card">
             <Cards
-              img={img4}
-              levelIcon="Advanced"
-              Title="Advanced CSS + JavaScript"
-              BadgeText="Coming Soon"
+              img={img6}
+              levelIcon="Beginner"
+              Title="Intro to UI/UX Design"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
               DownloadbtnState="d-flex"
@@ -67,13 +66,24 @@ const Roadmap = () => {
         <div className="row card-row">
           <div className="col-md-3 col-12 custom-card">
             <Cards
+              img={img4}
+              levelIcon="Advanced"
+              Title="Advanced CSS + JavaScript"
+              BadgeText="Coming Soon"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
+              DownloadbtnState="d-none"
+            />
+          </div>
+          <div className="col-md-3 col-12 custom-card">
+            <Cards
               img={img5}
               levelIcon="Advanced"
               Title="API Development"
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-flex"
+              DownloadbtnState="d-none"
                           />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -84,24 +94,7 @@ const Roadmap = () => {
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-flex"
-            />
-          </div>
-        </div>
-
-        <div className="row pt-3">
-          <h5>Designing Courses</h5>
-        </div>
-
-        <div className="row card-row pb-4">
-          <div className="col-md-3 col-12 custom-card">
-            <Cards
-              img={img6}
-              levelIcon="Beginner"
-              Title="Intro to UI/UX Design"
-              description="Some quick example text to build on the card title and make up the
-              bulk of the card's content."
-              DownloadbtnState="d-flex"
+              DownloadbtnState="d-none"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -112,10 +105,11 @@ const Roadmap = () => {
               BadgeText="Coming Soon"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-flex"
+              DownloadbtnState="d-none"
             />
           </div>
         </div>
+
       </div>
     </>
   );

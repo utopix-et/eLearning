@@ -50,10 +50,10 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText, description, Downloadbt
               <p className="ms-2">John Doe</p>
               </div>
               <div className={DownloadbtnState}>
-              <span id="download-btn">
+              <a className="text-dark" id="download-btn">
                 <AiOutlineDownload className="text-success me-1" />
                 Download
-              </span>
+              </a>
               </div>
               </div>
         </div>
