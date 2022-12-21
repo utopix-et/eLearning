@@ -11,12 +11,12 @@ import img6 from "../assets/Images/CourseImages/6.jpg";
 
 import "../style/Courses.css";
 
-const Courses = () => {
+const Roadmap = () => {
   return (
     <>
       <div className="row Main-row p-4 mx-3">
         <div className="row">
-          <h5>Programming Courses</h5>
+          <h5>Course Roadmaps</h5>
         </div>
 
         <div className="row card-row">
@@ -25,9 +25,10 @@ const Courses = () => {
               img={img1}
               levelIcon="Beginner"
               Title="Frontend Foundation HTML + CSS"
+              DownloadbtnState="d-flex"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-none"
+              DownloadbtnState="d-flex"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -37,7 +38,7 @@ const Courses = () => {
               Title="Javascript for Developer"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-none"
+              DownloadbtnState="d-flex"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -47,9 +48,22 @@ const Courses = () => {
               Title="Backend Basics"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-none"
+              DownloadbtnState="d-flex"
             />
           </div>
+          <div className="col-md-3 col-12 custom-card">
+            <Cards
+              img={img6}
+              levelIcon="Beginner"
+              Title="Intro to UI/UX Design"
+              description="Some quick example text to build on the card title and make up the
+              bulk of the card's content."
+              DownloadbtnState="d-flex"
+            />
+          </div>
+        </div>
+
+        <div className="row card-row">
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img4}
@@ -61,9 +75,6 @@ const Courses = () => {
               DownloadbtnState="d-none"
             />
           </div>
-        </div>
-
-        <div className="row card-row">
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img5}
@@ -86,23 +97,6 @@ const Courses = () => {
               DownloadbtnState="d-none"
             />
           </div>
-        </div>
-
-        <div className="row pt-3">
-          <h5>Designing Courses</h5>
-        </div>
-
-        <div className="row card-row pb-4">
-          <div className="col-md-3 col-12 custom-card">
-            <Cards
-              img={img6}
-              levelIcon="Beginner"
-              Title="Intro to UI/UX Design"
-              description="Some quick example text to build on the card title and make up the
-              bulk of the card's content."
-              DownloadbtnState="d-none"
-            />
-          </div>
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img6}
@@ -115,9 +109,10 @@ const Courses = () => {
             />
           </div>
         </div>
+
       </div>
     </>
   );
 };
 
-export default Courses;
+export default Roadmap;
