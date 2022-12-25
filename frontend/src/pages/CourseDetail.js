@@ -1,5 +1,5 @@
 import React from "react";
-import '../assets/css/CourseDetail.css'
+import '../style/Course-detail.css'
 
 const CourseDetail = () => {
   return (
