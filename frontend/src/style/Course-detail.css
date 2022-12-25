@@ -7,3 +7,9 @@
     font-size: 1.3rem;
     font-weight: 600;
 }
+.bg-gray{
+    background-color:orange; 
+}
+.nav-link{
+    color: white;
+}
