@@ -4,24 +4,24 @@ import '../style/Course-detail.css'
 const CourseDetailNav = () => {
     return (
         <div className='container'>
-        <nav className="navbar navbar-expand-lg navbar-light bg-gray">
-            <div className="container">
-                    <ul className="navbar-nav mx-auto">
+            <div className="row">
+                <div className="col-md-12">
+                    <ul className="nav nav-tabs">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Course Details</a>
+                            <a className="nav-link active" href="overview">Overview</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Resources</a>
+                            <a className="nav-link" href="curriculum">Curriculum</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Projects</a>
+                            <a className="nav-link" href="instructor">Instructor</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Recommendations</a>
+                            <a className="nav-link" href="reviews">Reviews</a>
                         </li>
                     </ul>
-            </div>
-        </nav>
+                    </div>
+                    </div>
         </div>
     )
 }
