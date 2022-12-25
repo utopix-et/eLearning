@@ -6,7 +6,7 @@ const CourseDetail = () => {
     <div className="container bg-primary">
       <div className="row">
         <div className="col-md-6 bg-warning">
-          <p className="my-4 ms-5 text-white course-title">Frontend Foundation HTML + CSS</p>
+          <p className="text-white course-title">Frontend Foundation HTML + CSS</p>
         </div>
       </div>
     </div>
