@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import Courses from "./pages/Courses";
 import Roadmap from "./pages/Roadmap";
 import Footer from "./components/Footer";
+import CourseDetailTop from "./components/CourseDetail-top";
 import CourseDetail from "./pages/CourseDetail";
 
 require('jquery')
