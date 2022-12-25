@@ -13,3 +13,13 @@
 .nav-link{
     color: white;
 }
+@media (max-width: 768px) {
+    .course-detail{
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    .course-title{
+        font-size: 1rem;
+    }
+}
