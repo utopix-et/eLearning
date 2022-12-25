@@ -7,7 +7,12 @@ import CourseDetailNav from '../components/CourseDetail-nav'
 const CourseDetail = () => {
     return (
         <div>
+            <div className="my-5">
+            <CourseDetailTop/>
+            </div>
+            <div className="my-5">
             <CourseDetailNav/>
+            </div>
         </div>
     )
 }
