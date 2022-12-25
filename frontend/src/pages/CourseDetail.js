@@ -2,9 +2,15 @@ import React from 'react'
 
 const CourseDetail = () => {
     return (
-        <div>
-            <h1>Course Detail</h1>
-        </div>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-md-12'>
+                    test
+                                        </div>
+                                        </div>
+                                        </div>
+
+
     )
 }
 
