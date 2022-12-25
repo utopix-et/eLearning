@@ -11,14 +11,14 @@ const CourseDetail = () => {
   return (
     <div className="container bg-primary">
       <div className="row">
-        <div className="col-md-6 bg-warning left-detail">
+        <div className="col-md-6 left-detail">
           <p className="text-white course-title">
             Frontend Foundation HTML + CSS
           </p>
           <GoPrimitiveDot className="text-success" />
           <span className="text-white"> Beginner </span>
 
-          <div className="d-flex justify-content-between mt-3">
+          <div className="d-flex justify-content-between mt-4">
             <div className="d-flex">
               <img
                 src={Yidnek}
@@ -27,7 +27,7 @@ const CourseDetail = () => {
                 width="30px"
                 height="30px"
               />
-              <p className="ms-2">John Doe</p>
+              <p className="ms-2 text-white">John Doe</p>
             </div>
           </div>
         </div>
