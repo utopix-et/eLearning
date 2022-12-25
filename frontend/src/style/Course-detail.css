@@ -1,7 +1,9 @@
+.left-detail{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
 .course-title{
     font-size: 1.3rem;
     font-weight: 600;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
 }
