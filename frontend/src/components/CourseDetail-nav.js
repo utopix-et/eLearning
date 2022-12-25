@@ -4,7 +4,7 @@ import '../style/Course-detail.css'
 const CourseDetailNav = () => {
     return (
         <div className='container'>
-        <nav className="navbar navbar-expand-lg navbar-light bg-gray">
+        <nav className="navbar navbar-expand-lg navbar-light bg-orange">
             <div className="container">
                     <ul className="navbar-nav mx-auto">
                         <li className="nav-item">
