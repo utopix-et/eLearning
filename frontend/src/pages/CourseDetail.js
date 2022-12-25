@@ -2,16 +2,15 @@ import React from "react";
 import "../style/Course-detail.css";
 
 import { GoPrimitiveDot } from "react-icons/go";
-import { WiMoonWaningCrescent1 } from "react-icons/wi";
-import { BsFillTriangleFill } from "react-icons/bs";
-import { AiOutlineDownload } from "react-icons/ai";
+import {IoMdTime} from "react-icons/io";
+
 import Yidnek from "../assets/Images/Instructer/yidnek.jpg";
 
 const CourseDetail = () => {
   return (
     <div className="container bg-primary">
       <div className="row">
-        <div className="col-md-6 left-detail">
+        <div className="col-md-6 course-detail">
           <p className="text-white course-title">
             Frontend Foundation HTML + CSS
           </p>
@@ -31,6 +30,16 @@ const CourseDetail = () => {
             </div>
           </div>
         </div>
+
+        <div className="col-md-6 course-detail">
+           <h5 className="text-white"> 
+            About this Course
+            </h5>
+            <p className="text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+
       </div>
     </div>
   );
