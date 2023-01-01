@@ -29,6 +29,22 @@ const Profile = () => {
           />
           <span className="text-decoration-underline">Edit</span>
         </div>
+        <div className="col-md-3 col-6 mt-3 bg-warning text-center mx-auto">
+          <div className="row">
+            <div className="col-md-6 col-12">
+          <span className="text-dark">
+            Rank: 
+            <p>3</p>
+          </span>
+          </div>
+          <div className="col-md-6 col-12">
+          <span className="text-dark">
+            Points:
+            <p>100</p>
+          </span>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   );
