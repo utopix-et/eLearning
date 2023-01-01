@@ -4,7 +4,7 @@ import LogoFooter from '../assets/Logo/logo-footer.png';
 
 const Footer = () =>{
     return(
-            <div className="row bg-dark">
+            <div className="row bg-dark fixed-bottom">
                 <div className="col-md-12">
                     <div className="footer">
                         <div className="row">
