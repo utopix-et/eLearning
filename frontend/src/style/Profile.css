@@ -21,9 +21,12 @@
 .github-input{
     width:40%;
 }
-.btn{
-    margin-top: 2.5rem;
+.submit-btn{
+    margin-top: 2rem;
     width: 30%;
+}
+.btn-row{
+    width: 50%;
 }
 @media (max-width: 768px){
     .input-row{
@@ -42,6 +45,9 @@
     }
     .right-inputs{
         margin-top:1rem;
+    }
+    .btn-row{
+        width:100%;
     }
 
 }

@@ -123,12 +123,12 @@ const Profile = () => {
       </div>
       </div>
 
-      <div className="row my-5 mx-auto">
+      <div className="row mb-5 mt-3 btn-row mx-auto">
         <div className="col-md-6 text-center mx-auto">
-          <button className="btn btn-primary" type="submit">Save</button>
+          <button className="btn submit-btn btn-primary" type="submit">Save</button>
         </div>
-        <div className="col-md-6 mt-3 mx-auto text-center">
-          <button className="btn btn-secondary" type="submit">Cancel</button>
+        <div className="col-md-6 mx-auto mb-5 text-center">
+          <button className="btn submit-btn btn-secondary" type="submit">Cancel</button>
         </div>
       </div>
       </form>
