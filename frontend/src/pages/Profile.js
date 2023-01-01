@@ -46,8 +46,8 @@ const Profile = () => {
 
       <form>
       <div className="row mt-5">
-        <div className="col-md-10">
-          <div className="row">
+        <div className="col-md-10 mx-auto">
+          <div className="row mx-auto">
             <div className="col-md-4 mx-auto">
               <label className="form-label">
                 Name
@@ -61,7 +61,7 @@ const Profile = () => {
               />
             </div>
 
-            <div className="col-md-4 mx-auto">
+            <div className="col-md-4 right-inputs mx-auto">
               <label className="form-label">
                 Email
               </label>
@@ -78,7 +78,8 @@ const Profile = () => {
       </div>
 
       <div className="row input-row">
-        <div className="col-md-10 col-12 mx-auto text-dark">
+        <div className="col-md-10 mx-auto">
+          <div className="row mx-auto">
             <div className="col-md-4 mx-auto">
               <label className="form-label">
                 Student ID
@@ -92,7 +93,7 @@ const Profile = () => {
               />
             </div>
 
-            <div className="col-md-4 mx-auto">
+            <div className="col-md-4 right-inputs mx-auto">
               <label className="form-label">
                 Password
               </label>
@@ -104,12 +105,12 @@ const Profile = () => {
                 disabled
               />
             </div>
+            </div>
         </div>
       </div>
 
       <div className="row input-row-2 mx-auto">
-        <div className="col-md-10 col-12 mx-auto text-dark">
-            <div className="col-md-6 github-input col-12">
+            <div className="col-md-4 col-12">
               <label className="form-label">
                 Github Username
               </label>
@@ -119,15 +120,14 @@ const Profile = () => {
                 id="inputGithub"
                 placeholder="john-doe"
               />
-            </div>
-        </div>
+      </div>
       </div>
 
-      <div className="row mt-5 pt-3 w-50 mx-auto">
+      <div className="row my-5 mx-auto">
         <div className="col-md-6 text-center mx-auto">
           <button className="btn btn-primary" type="submit">Save</button>
         </div>
-        <div className="col-md-6 mx-auto text-center">
+        <div className="col-md-6 mt-3 mx-auto text-center">
           <button className="btn btn-secondary" type="submit">Cancel</button>
         </div>
       </div>

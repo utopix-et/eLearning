@@ -15,10 +15,15 @@
 }
 .input-row-2{
     margin-top:2.5rem;
-    width:85%;
+    width:100%;
+    padding-left:12.5rem;
 }
 .github-input{
     width:40%;
+}
+.btn{
+    margin-top: 2.5rem;
+    width: 30%;
 }
 @media (max-width: 768px){
     .input-row{
@@ -27,8 +32,16 @@
     .input-row-2{
         margin-top:1rem;
         width:100%;
+        padding-left:0rem;
     }
     .github-input{
         width:100%;
     }
+    .btn{
+        width:100%;
+    }
+    .right-inputs{
+        margin-top:1rem;
+    }
+
 }
