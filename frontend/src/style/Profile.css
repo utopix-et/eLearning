@@ -10,9 +10,3 @@
 .blue-gradient{
     background: linear-gradient(90deg, rgba(0,0,0,1) 10%, blue 100%);
 }
-.avatar-img{
-    width: 100%;
-    position : absolute;
-    object-fit: cover;
-    object-position: center;
-}
