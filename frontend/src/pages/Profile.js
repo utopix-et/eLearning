@@ -29,21 +29,49 @@ const Profile = () => {
           />
           <span className="text-decoration-underline">Edit</span>
         </div>
-        <div className="col-md-3 col-6 mt-3 bg-dark text-center mx-auto">
+        <div className="col-md-3 col-6 mt-3 bg-dark text-white text-center mx-auto">
           <div className="row">
             <div className="col-md-6 col-12 border py-2">
-          <span className="text-white">
-            Rank
-            <span className="badge bg-primary text-white ms-2">3</span>
-          </span>
+                Rank
+                <span className="badge bg-primary text-white ms-2">3</span>
+            </div>
+            <div className="col-md-6 col-12 py-2">
+                Points
+                <span className="badge bg-primary text-white ms-2">100</span>
+            </div>
           </div>
-          <div className="col-md-6 col-12 py-2">
-          <span className="text-white">
-            Points
-            <span className="badge bg-primary text-white ms-2">100</span>
-          </span>
-          </div>
-          </div>
+        </div>
+      </div>
+
+      <div className="row mt-5">
+        <div className="col-md-10 col-12 mx-auto text-dark">
+          <form className="row g-3">
+            <div className="col-md-4 mx-auto">
+              <label className="form-label">
+                Name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="inputName"
+                placeholder="John Doe"
+                disabled
+              />
+            </div>
+
+            <div className="col-md-4 mx-auto">
+              <label className="form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="inputEmail"
+                placeholder="johndoe@gmail.com"
+                disabled
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>
