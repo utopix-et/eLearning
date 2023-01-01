@@ -7,7 +7,7 @@ import Avatar from "../assets/Images/Profile/yidnek.jpg";
 
 const Profile = () => {
   return (
-    <div className="container-fluid bg-light">
+    <div className="container-fluid bg-light mb-5 pb-5">
       <div
         className="row blue-gradient text-center text-white p-5 border rounded"
         style={{ fontSize: "1.6rem" }}
@@ -43,9 +43,11 @@ const Profile = () => {
         </div>
       </div>
 
+
+      <form>
       <div className="row mt-5">
-        <div className="col-md-10 col-12 mx-auto text-dark">
-          <form className="row g-3">
+        <div className="col-md-10">
+          <div className="row">
             <div className="col-md-4 mx-auto">
               <label className="form-label">
                 Name
@@ -70,10 +72,67 @@ const Profile = () => {
                 placeholder="johndoe@gmail.com"
                 disabled
               />
-            </div>
-          </form>
+        </div>
         </div>
       </div>
+      </div>
+
+      <div className="row input-row">
+        <div className="col-md-10 col-12 mx-auto text-dark">
+            <div className="col-md-4 mx-auto">
+              <label className="form-label">
+                Student ID
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="inputID"
+                placeholder="ETS1242/13"
+                disabled
+              />
+            </div>
+
+            <div className="col-md-4 mx-auto">
+              <label className="form-label">
+                Password
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="inputPassword"
+                placeholder="********"
+                disabled
+              />
+            </div>
+        </div>
+      </div>
+
+      <div className="row input-row-2 mx-auto">
+        <div className="col-md-10 col-12 mx-auto text-dark">
+            <div className="col-md-6 github-input col-12">
+              <label className="form-label">
+                Github Username
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="inputGithub"
+                placeholder="john-doe"
+              />
+            </div>
+        </div>
+      </div>
+
+      <div className="row mt-5 pt-3 w-50 mx-auto">
+        <div className="col-md-6 text-center mx-auto">
+          <button className="btn btn-primary" type="submit">Save</button>
+        </div>
+        <div className="col-md-6 mx-auto text-center">
+          <button className="btn btn-secondary" type="submit">Cancel</button>
+        </div>
+      </div>
+      </form>
+
     </div>
   );
 };

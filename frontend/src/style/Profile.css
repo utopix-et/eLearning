@@ -10,3 +10,25 @@
 .blue-gradient{
     background: linear-gradient(90deg, rgba(0,0,0,1) 10%, blue 100%);
 }
+.input-row{
+    margin-top: 2.7rem;
+}
+.input-row-2{
+    margin-top:2.5rem;
+    width:85%;
+}
+.github-input{
+    width:40%;
+}
+@media (max-width: 768px){
+    .input-row{
+        margin-top:1rem;
+    }
+    .input-row-2{
+        margin-top:1rem;
+        width:100%;
+    }
+    .github-input{
+        width:100%;
+    }
+}
