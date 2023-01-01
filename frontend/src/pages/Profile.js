@@ -25,7 +25,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-md-12 col-12 text-center text-dark mt-3">
           PROFILE INFORMATION{" "}
         </div>
