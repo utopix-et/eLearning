@@ -10,7 +10,7 @@ const Profile = () => {
       <div className="row">
         <div className="col-md-12 col-12">
             <div
-              className="bg-primary text-center text-white p-5 border rounded"
+              className="blue-gradient color-block z-depth-1 text-center text-white p-5 border rounded"
               style={{ fontSize: "1.6rem" }}
             >
               UTOPIX <span style={{ fontSize: "1rem" }}>E-LEARNING</span>{" "}

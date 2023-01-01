@@ -7,3 +7,6 @@
     justify-content: center;
     align-items: center;
 }
+.blue-gradient{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 10%, blue 100%);
+}
