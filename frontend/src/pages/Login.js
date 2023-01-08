@@ -4,6 +4,18 @@ import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
+const httpReq = async (url, method, body) => {
+  const response = await fetch(url, {
+    method: method,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  const data = await response.json();
+  return data;
+};
+
 const Login = () => {
   return (
     <div className="container-fluid mx-auto py-3">
