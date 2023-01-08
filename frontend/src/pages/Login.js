@@ -1,22 +1,40 @@
-import React from "react";
+import React,{ useState } from "react";
+import axios from "axios";
 import Logo  from "../assets/Logo/logo.png";
 import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-
-const httpReq = async (url, method, body) => {
-  const response = await fetch(url, {
-    method: method,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-  const data = await response.json();
-  return data;
-};
-
+ 
 const Login = () => {
+
+  let [login, setLogin] = useState('false')
+
+  const [values, setValues] = useState({
+    password: "",
+    email: "",
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const getUsers = async (e) => {
+    e.preventDefault()
+    try {
+     let res = await axios.post('url', {
+        email: values.email,
+        password: values.password
+      });
+      alert('you have successfully loggedin');
+
+    console.log(res.data);
+  } 
+  catch (err) {
+      alert(err.message);
+    } 
+  };
+
   return (
     <div className="container-fluid mx-auto py-3">
         <div className="row my-4">
@@ -50,6 +68,7 @@ const Login = () => {
         </div>
         <div className="mx-auto text-center pb-3 bg-white">Or</div>
         
+        <form onSubmit={getUsers}>
         <div className="form-row mx-auto bg-white mt-4">
           <div className="col-md-12 col-12 mx-auto">
             <div className="row mx-auto">
@@ -58,6 +77,7 @@ const Login = () => {
                   type="text"
                   className="form-control"
                   placeholder="Email"
+                  onChange={handleChange("email")}
                 />
               </div>
               <div className="col-md-10 col-12 mx-auto my-4">
@@ -65,6 +85,7 @@ const Login = () => {
                   type="text"
                   className="form-control"
                   placeholder="Password"
+                  onChange={handleChange("password")}
                 />
               </div>
               <div className="col-md-10 col-12 mx-auto my-4">
@@ -78,6 +99,7 @@ const Login = () => {
            
           </div>
         </div>
+        </form>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ function App() {
     return(
         <div className="container-fluid bg-light">
             <Navbar/>
-            <Profile/>
+            <Login/>
             <Footer/>
       </div>
     );
