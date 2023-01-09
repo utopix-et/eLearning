@@ -19,20 +19,20 @@ const Login = () => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
-  const getUsers = async (e) => {
-    e.preventDefault()
-    try {
-     let res = await axios.post('url', {
-        email: values.email,
-        password: values.password
-      });
-      alert('you have successfully loggedin');
+  console.log(values);
 
-    console.log(res.data);
-  } 
-  catch (err) {
-      alert(err.message);
-    } 
+  const getUsers = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post("http://localhost:3000/users?login", {
+        email: values.email,
+        password: values.password,
+      });
+      console.log(data);
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
 
   return (
