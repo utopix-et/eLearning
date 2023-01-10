@@ -21,8 +21,10 @@ require('bootstrap')
 
 function App() {
     return(
-        <div className="container-fluid bg-light">
-<Navbar/>
+        <>
+        <Navbar/>
+        <div className="container-fluid bg-light pb-5">
+
   
 <BrowserRouter>
   <Routes>
@@ -39,6 +41,7 @@ function App() {
 <Footer />
 
 </div>
+</>
     );
 }
 

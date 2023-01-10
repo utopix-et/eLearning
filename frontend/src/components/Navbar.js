@@ -47,13 +47,13 @@ const Navbar = () => {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <button
+                <a
                   className="btn btn-primary text-white nav-link px-3 text-center"
                   href="/profile"
                 >
                   Tinsaye Simeneh
                   <BsChevronDown className="bg-none text-white ms-2" />
-                </button>
+                </a>
               </li>
             </ul>
           </div>

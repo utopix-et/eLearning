@@ -68,11 +68,11 @@ const Login = () => {
             <div className="row mx-auto">
               <div className="col-md-5 col-11 rounded social-button btn pt-2">
                 <FcGoogle className="google-icon" size={30} />
-                <span className="social-text ps-2">Continue with Google</span>
+                <span className="social-text ps-2">Login with Google</span>
               </div>
               <div className="col-md-5 col-11 rounded social-button btn pt-2">
                 <BsGithub className="github-icon " size={30} />
-                <span className="social-text ps-2">Continue with Github</span>
+                <span className="social-text ps-2">Login with Github</span>
               </div>
             </div>
           </div>
