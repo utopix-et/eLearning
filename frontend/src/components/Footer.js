@@ -9,11 +9,11 @@ const Footer = () =>{
                     <div className="footer">
                         <div className="row">
                             <div className="col-md-3 col-12">
-                                <div className="footer-logo py-3 ms-5">
+                                <div className="footer-logo py-2 ms-5">
                                     <img src={LogoFooter} alt="logo" />
                                 </div>
                             </div>
-                            <div className="col-md-3 col-12 text-white pt-4">
+                            <div className="col-md-3 col-12 text-white pt-3">
                                   <p>Utopix @2022 </p>
                             </div>
                             </div>
