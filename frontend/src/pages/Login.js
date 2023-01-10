@@ -24,8 +24,6 @@ const Login = () => {
       let res = await axios.post(
         "http://elearning-api.heyeman.com/users/auth/login",
         {
-          firstname: "Tinsaye",
-          lastname: "Heyeman",
           email: values.email,
           password: values.password,
         }
@@ -34,11 +32,7 @@ const Login = () => {
       alert("you have successfully loggedin");
 
       setLogin = true;
-
-      localStorage.setItem("userEmail", res.data.userDetails.email);
-      localStorage.setItem("userToken", res.data.tokens.accessToken);
-      localStorage.setItem("userFirstname", res.data.userDetails.firstname);
-      localStorage.setItem("userLastname", res.data.userDetails.lastname);
+      window.href = "/";
 
       console.log(res.data);
     } catch (err) {

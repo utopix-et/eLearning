@@ -85,16 +85,16 @@ const Signup = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Student ID Number (Example - ETS1242/13)"
-                    onChange={handleChange("studentId")}
+                    placeholder="First Name"
+                    onChange={handleChange("firstName")}
                   />
                 </div>
                 <div className="col-md-10 col-12 mx-auto my-4">
-                  <input
+                <input
                     type="text"
                     className="form-control"
-                    placeholder="Email"
-                    onChange={handleChange("email")}
+                    placeholder="Last Name"
+                    onChange={handleChange("lastName")}
                   />
                 </div>
 
@@ -106,11 +106,12 @@ const Signup = () => {
                     onChange={handleChange("password")}
                   />
                 </div>
-                <div className="col-md-10 col-12 mx-auto mb-2">
-                  <input
-                    type="file"
+                <div className="col-md-10 col-12 mx-auto"> 
+                <input
+                    type="text"
                     className="form-control"
-                    onChange={handleChange("photo")}
+                    placeholder="Email"
+                    onChange={handleChange("email")}
                   />
                 </div>
 
