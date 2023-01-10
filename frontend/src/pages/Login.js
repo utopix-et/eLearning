@@ -55,10 +55,10 @@ const Login = () => {
             </div>
       <div className="menu-row mx-auto bg-white">
         <div className="col-md-6 col-6 text-center">
-          <button className="menu-button">SIGN UP</button>
+          <a className="menu-button text-decoration-none" href="/signup">SIGN UP</a>
         </div>
         <div className="col-md-6 col-6 text-center">
-          <button className="menu-button active">SIGN IN</button>
+          <a className="menu-button active text-decoration-none" href="/login">SIGN IN</a>
         </div>
       </div>
 

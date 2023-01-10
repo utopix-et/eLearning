@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="container-fluid mx-auto py-3">
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img src={Logo} alt="Logo" width="170" height="30" />
           </a>
           <button
@@ -25,22 +25,22 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/dashboard">
                   Dashboard
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/courses">
                     Courses
                 </a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/roadmap">
                     Roadmaps
                 </a>
                 </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/assessment">
                   Assessment
                 </a>
               </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <button
                   className="btn btn-primary text-white nav-link px-3 text-center"
-                  href="#"
+                  href="/profile"
                 >
                   Tinsaye Simeneh
                   <BsChevronDown className="bg-none text-white ms-2" />
