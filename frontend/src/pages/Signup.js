@@ -23,12 +23,15 @@ const Signup = () => {
         "http://elearning-api.heyeman.com/users/auth/register",
         {
           lastname: values.lastName,
-          firstName: values.firstName,
+          password: values.password,
+          firstname: values.firstName,
           email: values.email,
         }
       );
 
       alert("you have successfully Registered");
+
+        window.location.href = "/login";
 
       localStorage.setItem("userEmail", res.data.userDetails.email);
       localStorage.setItem("userFirstname", res.data.userDetails.firstname);

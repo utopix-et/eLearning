@@ -32,7 +32,7 @@ const Login = () => {
       alert("you have successfully loggedin");
 
       setLogin = true;
-      window.href = "/";
+      window.location.href = "/dashboard";
 
       console.log(res.data);
     } catch (err) {
