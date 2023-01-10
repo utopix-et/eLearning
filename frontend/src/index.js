@@ -24,7 +24,7 @@ function App() {
         <div className="container-fluid bg-light">
 <Navbar/>
   
-<Router>
+<BrowserRouter>
   <Routes>
   <Route path="/" element={<Login />}/>
     <Route path="/signup" element={<Signup />}/>
@@ -35,7 +35,7 @@ function App() {
     <Route path="/roadmap" element={<Roadmap />}/>
   <Route path="*" element={<Login/>} />
   </Routes>
-</Router>
+</BrowserRouter>
 <Footer />
 
 </div>
