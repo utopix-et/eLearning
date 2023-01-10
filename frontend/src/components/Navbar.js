@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../assets/Logo/logo.png";
 import "../style/Navbar.css";
-import { BsChevronDown } from "react-icons/bs";
 
 const Navbar = () => {
   return (
