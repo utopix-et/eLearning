@@ -25,20 +25,24 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/dashboard">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/dashboard"
+                >
                   Dashboard
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/courses">
-                    Courses
+                  Courses
                 </a>
-                </li>
-                <li className="nav-item">
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="/roadmap">
-                    Roadmaps
+                  Roadmaps
                 </a>
-                </li>
+              </li>
               <li className="nav-item">
                 <a className="nav-link" href="/assessment">
                   Assessment

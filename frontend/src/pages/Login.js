@@ -1,13 +1,12 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import Logo  from "../assets/Logo/logo.png";
+import Logo from "../assets/Logo/logo.png";
 import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
- 
-const Login = () => {
 
-  let [login, setLogin] = useState(false)
+const Login = () => {
+  let [login, setLogin] = useState(false);
 
   const [values, setValues] = useState({
     password: "",
@@ -20,45 +19,51 @@ const Login = () => {
   };
 
   const getUsers = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-     let res = await axios.post('http://elearning-api.heyeman.com/users/auth/login', {
-        firstname: "Tinsaye",
-        lastname: "Heyeman",
-        email: values.email,
-        password: values.password
-      });
-    
-    alert('you have successfully loggedin');
+      let res = await axios.post(
+        "http://elearning-api.heyeman.com/users/auth/login",
+        {
+          firstname: "Tinsaye",
+          lastname: "Heyeman",
+          email: values.email,
+          password: values.password,
+        }
+      );
 
-    setLogin = true;
+      alert("you have successfully loggedin");
 
-    localStorage.setItem('userEmail',res.data.userDetails.email);
-    localStorage.setItem('userToken',res.data.tokens.accessToken);
-    localStorage.setItem('userFirstname',res.data.userDetails.firstname);
-    localStorage.setItem('userLastname',res.data.userDetails.lastname);
+      setLogin = true;
 
-    console.log(res.data);
-  } 
-  catch (err) {
+      localStorage.setItem("userEmail", res.data.userDetails.email);
+      localStorage.setItem("userToken", res.data.tokens.accessToken);
+      localStorage.setItem("userFirstname", res.data.userDetails.firstname);
+      localStorage.setItem("userLastname", res.data.userDetails.lastname);
+
+      console.log(res.data);
+    } catch (err) {
       setLogin = false;
       alert(err.message);
-    } 
+    }
   };
 
   return (
     <div className="container-fluid mx-auto py-3">
-        <div className="row my-4">
-            <div className="col-12 col-md-12 mx-auto text-center">
-                <img src={Logo} alt="Logo" className="img-fluid" />
-            </div>
-            </div>
+      <div className="row my-4">
+        <div className="col-12 col-md-12 mx-auto text-center">
+          <img src={Logo} alt="Logo" className="img-fluid" />
+        </div>
+      </div>
       <div className="menu-row mx-auto bg-white">
         <div className="col-md-6 col-6 text-center">
-          <a className="menu-button text-decoration-none" href="/signup">SIGN UP</a>
+          <a className="menu-button text-decoration-none" href="/signup">
+            SIGN UP
+          </a>
         </div>
         <div className="col-md-6 col-6 text-center">
-          <a className="menu-button active text-decoration-none" href="/login">SIGN IN</a>
+          <a className="menu-button active text-decoration-none" href="/login">
+            SIGN IN
+          </a>
         </div>
       </div>
 
@@ -78,38 +83,42 @@ const Login = () => {
           </div>
         </div>
         <div className="mx-auto text-center pb-3 bg-white">Or</div>
-        
+
         <form onSubmit={getUsers}>
-        <div className="form-row mx-auto bg-white mt-4">
-          <div className="col-md-12 col-12 mx-auto">
-            <div className="row mx-auto">
-              <div className="col-md-10 col-12 mx-auto">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Email"
-                  onChange={handleChange("email")}
-                />
+          <div className="form-row mx-auto bg-white mt-4">
+            <div className="col-md-12 col-12 mx-auto">
+              <div className="row mx-auto">
+                <div className="col-md-10 col-12 mx-auto">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email"
+                    onChange={handleChange("email")}
+                  />
+                </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Password"
+                    onChange={handleChange("password")}
+                  />
+                </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <button className="btn btn-primary form-control">
+                    SIGN IN
+                  </button>
+                </div>
+                <div className="col-md-10 col-12 mx-auto text-center my-2">
+                  Forgot Password?
+                  <a className="text-decoration-none" href="#Forgot">
+                    {" "}
+                    Reset
+                  </a>
+                </div>
               </div>
-              <div className="col-md-10 col-12 mx-auto my-4">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Password"
-                  onChange={handleChange("password")}
-                />
-              </div>
-              <div className="col-md-10 col-12 mx-auto my-4">
-            <button className="btn btn-primary form-control">SIGN IN</button>
             </div>
-            <div className="col-md-10 col-12 mx-auto text-center my-2">
-            Forgot Password?
-            <a className="text-decoration-none" href="#Forgot"> Reset</a>
-            </div>
-            </div>
-           
           </div>
-        </div>
         </form>
       </div>
     </div>
