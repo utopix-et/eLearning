@@ -1,10 +1,49 @@
-import React from "react";
+import React, {useState} from "react";
 import Logo  from "../assets/Logo/logo.png";
+import axios from "axios";
 import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
 const Signup = () => {
+
+  const [values, setValues] = useState({
+    password: "",
+    email: "",
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const regUsers = async (e) => {
+    e.preventDefault()
+    try {
+     let res = await axios.post('http://elearning-api.heyeman.com/users/auth/register', {
+        firstname: "Tinsaye",
+        lastname: "Heyeman",
+        studentId: values.studentId,
+        email: values.email,
+        password: values.password,
+        photo: values.photo
+      });
+    
+    alert('you have successfully Registered');
+
+    localStorage.setItem('userEmail',res.data.userDetails.email);
+    localStorage.setItem('userToken',res.data.tokens.accessToken);
+    localStorage.setItem('userFirstname',res.data.userDetails.firstname);
+    localStorage.setItem('userLastname',res.data.userDetails.lastname);
+
+    console.log(res.data);
+  } 
+  catch (err) {
+      alert(err.message);
+    } 
+  };
+
+
   return (
     <div className="container-fluid mx-auto py-3">
         <div className="row my-4">
@@ -41,11 +80,13 @@ const Signup = () => {
         <div className="form-row mx-auto bg-white mt-4">
           <div className="col-md-12 col-12 mx-auto">
             <div className="row mx-auto">
+            <form onSubmit={regUsers}>
               <div className="col-md-10 col-12 mx-auto">
                 <input
                   type="text"
                   className="form-control"
                   placeholder="Student ID Number (Example - ETS1242/13)"
+                  onChange={handleChange("studentId")}
                 />
               </div>
               <div className="col-md-10 col-12 mx-auto my-4">
@@ -53,6 +94,7 @@ const Signup = () => {
                   type="text"
                   className="form-control"
                   placeholder="Email"
+                  onChange={handleChange("email")}
                 />
               </div>
 
@@ -61,15 +103,21 @@ const Signup = () => {
                   type="text"
                   className="form-control"
                   placeholder="Password"
+                  onChange={handleChange("password")}
                 />
               </div>
             <div className="col-md-10 col-12 mx-auto mb-2">
-            <input type="file" className="form-control" />
+            <input 
+            type="file" 
+            className="form-control" 
+            onChange={handleChange("photo")}
+            />
             </div>
 
               <div className="col-md-10 col-12 mx-auto my-4">
             <button className="btn btn-primary form-control">SIGN UP</button>
             </div>
+            </form>
             </div>
            
           </div>

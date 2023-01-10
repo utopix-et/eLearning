@@ -22,7 +22,7 @@ const Login = () => {
   const getUsers = async (e) => {
     e.preventDefault()
     try {
-     let res = await axios.post('http://elearning-api.heyeman.com/users/auth/register', {
+     let res = await axios.post('http://elearning-api.heyeman.com/users/auth/login', {
         firstname: "Tinsaye",
         lastname: "Heyeman",
         email: values.email,
