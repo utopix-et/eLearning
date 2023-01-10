@@ -68,7 +68,7 @@ const Signup = () => {
             </div>
 
               <div className="col-md-10 col-12 mx-auto my-4">
-            <button className="btn btn-primary form-control">SIGN IN</button>
+            <button className="btn btn-primary form-control">SIGN UP</button>
             </div>
             </div>
            
