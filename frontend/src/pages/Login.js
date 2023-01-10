@@ -7,7 +7,7 @@ import { BsGithub } from "react-icons/bs";
  
 const Login = () => {
 
-  let [login, setLogin] = useState('false')
+  let [login, setLogin] = useState(false)
 
   const [values, setValues] = useState({
     password: "",
@@ -19,20 +19,31 @@ const Login = () => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
-  console.log(values);
-
   const getUsers = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      const { data } = await axios.post("http://localhost:3000/users?login", {
+     let res = await axios.post('http://elearning-api.heyeman.com/users/auth/register', {
+        firstname: "Tinsaye",
+        lastname: "Heyeman",
         email: values.email,
-        password: values.password,
+        password: values.password
       });
-      console.log(data);
-    }
-    catch (error) {
-      console.log(error);
-    }
+    
+    alert('you have successfully loggedin');
+
+    setLogin = true;
+
+    localStorage.setItem('userEmail',res.data.userDetails.email);
+    localStorage.setItem('userToken',res.data.tokens.accessToken);
+    localStorage.setItem('userFirstname',res.data.userDetails.firstname);
+    localStorage.setItem('userLastname',res.data.userDetails.lastname);
+
+    console.log(res.data);
+  } 
+  catch (err) {
+      setLogin = false;
+      alert(err.message);
+    } 
   };
 
   return (
