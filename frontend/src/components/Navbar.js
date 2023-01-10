@@ -56,7 +56,14 @@ const Navbar = () => {
                   href="/profile"
                 >
                   Tinsaye Simeneh
-                  <BsChevronDown className="bg-none text-white ms-2" />
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="btn btn-secondary text-white nav-link px-3 text-center"
+                  href="/login"
+                >
+                  Logout
                 </a>
               </li>
             </ul>
