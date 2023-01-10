@@ -22,19 +22,15 @@ const Signup = () => {
       let res = await axios.post(
         "http://elearning-api.heyeman.com/users/auth/register",
         {
-          firstname: "Tinsaye",
-          lastname: "Heyeman",
-          studentId: values.studentId,
+          lastname: values.lastName,
+          firstName: values.firstName,
           email: values.email,
-          password: values.password,
-          photo: values.photo,
         }
       );
 
       alert("you have successfully Registered");
 
       localStorage.setItem("userEmail", res.data.userDetails.email);
-      localStorage.setItem("userToken", res.data.tokens.accessToken);
       localStorage.setItem("userFirstname", res.data.userDetails.firstname);
       localStorage.setItem("userLastname", res.data.userDetails.lastname);
 
@@ -90,7 +86,7 @@ const Signup = () => {
                   />
                 </div>
                 <div className="col-md-10 col-12 mx-auto my-4">
-                <input
+                  <input
                     type="text"
                     className="form-control"
                     placeholder="Last Name"
@@ -102,16 +98,16 @@ const Signup = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Password"
-                    onChange={handleChange("password")}
-                  />
-                </div>
-                <div className="col-md-10 col-12 mx-auto"> 
-                <input
-                    type="text"
-                    className="form-control"
                     placeholder="Email"
                     onChange={handleChange("email")}
+                  />
+                </div>
+                <div className="col-md-10 col-12 mx-auto">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Password"
+                    onChange={handleChange("password")}
                   />
                 </div>
 
