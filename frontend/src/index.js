@@ -22,10 +22,23 @@ require('bootstrap')
 function App() {
     return(
         <div className="container-fluid bg-light">
-            <Navbar/>
-            <Login/>
-            <Footer/>
-      </div>
+<Navbar/>
+  
+<Router>
+  <Routes>
+  <Route path="/" element={<Login />}/>
+    <Route path="/signup" element={<Signup />}/>
+    <Route path="/dashboard" element={<Dashboard />}/>
+    <Route path="/profile" element={<Profile />}/>
+    <Route path="/courses" element={<Courses />}/>
+    <Route path="/courses/:id" element={<CourseDetail />}/>
+    <Route path="/roadmap" element={<Roadmap />}/>
+  <Route path="*" element={<Login/>} />
+  </Routes>
+</Router>
+<Footer />
+
+</div>
     );
 }
 
