@@ -7,8 +7,10 @@ import axios from "axios";
 import Cover from "../assets/Images/Profile/cover.jpg";
 import Avatar from "../assets/Images/Profile/yidnek.jpg";
 
+
 const Profile = () => {
-  const [values, setValues] = useState({
+
+/*  const [values, setValues] = useState({
     email: "",
     firstName: "",
     lastName: "",
@@ -19,9 +21,9 @@ const Profile = () => {
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
+*/
 
   const [data, setData] = useState([]);
-  let localID = localStorage.getItem("Id");
   let localToken = localStorage.getItem("Token");
   let localrefreshToken = localStorage.getItem("refreshToken");
 
@@ -94,7 +96,8 @@ const Profile = () => {
                   type="text"
                   className="form-control"
                   id="inputFirstName"
-                  onChange={handleChange("firstName")}
+                  value={data.firstname}
+                  disabled
                 />
               </div>
 
@@ -104,7 +107,8 @@ const Profile = () => {
                   type="text"
                   className="form-control"
                   id="inputLastName"
-                  onChange={handleChange("lastName")}
+                  value={data.lastname}
+                  disabled
                 />
               </div>
             </div>
@@ -120,7 +124,8 @@ const Profile = () => {
                   type="text"
                   className="form-control"
                   id="inputEmail"
-                  onChange={handleChange("email")}
+                  value={data.email}
+                  disabled
                 />
               </div>
 
@@ -130,7 +135,8 @@ const Profile = () => {
                   type="text"
                   className="form-control"
                   id="inputGithub"
-                  onChange={handleChange("github")}
+                  value={data.github}
+                  disabled
                 />
               </div>
             </div>
