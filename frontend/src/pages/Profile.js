@@ -1,11 +1,41 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 
 import "../style/Profile.css";
+
+import axios from "axios";
 
 import Cover from "../assets/Images/Profile/cover.jpg";
 import Avatar from "../assets/Images/Profile/yidnek.jpg";
 
 const Profile = () => {
+
+  let [data, setData] = useState([]);
+  let localID = localStorage.getItem("Id");
+  let localToken = localStorage.getItem("Token");
+  let localrefreshToken = localStorage.getItem("refreshToken");
+
+  const fetchQuotes = async () => {
+    const config = {
+      headers: {
+        'Authorization': `Bearer ${localToken}`,
+        'refreshToken': localrefreshToken,
+      }
+    };
+    const res = await axios.get(
+      `http://elearning-api.heyeman.com/users/me`,
+      config
+    );
+    
+    console.log(res.data);
+    return res.data;
+  };
+
+  useEffect(() => {
+    fetchQuotes().then((data) => {
+      setData(data);
+    });
+  }, []);
+
   return (
     <div className="container-fluid bg-light mb-5 pb-5">
       <div

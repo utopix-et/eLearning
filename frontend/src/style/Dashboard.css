@@ -9,3 +9,12 @@
     align-items: center;
     background-color: #C4C8CD;
 }
+.dash-card{
+    margin-top:0rem;
+}
+
+@media (max-width: 768px) {
+    .dash-card{
+        margin-top:1rem;
+    }
+}

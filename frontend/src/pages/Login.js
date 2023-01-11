@@ -32,7 +32,13 @@ const Login = () => {
       alert("you have successfully loggedin");
 
       setLogin = true;
-      window.location.href = "/dashboard";
+
+      localStorage.setItem("Token", res.data.tokens.accessToken);
+      localStorage.setItem("refreshToken", res.data.tokens.refreshToken);
+      localStorage.setItem("Id", res.data.userDetails._id);
+      localStorage.setItem("userEmail", res.data.userDetails.email);
+      localStorage.setItem("userFirstname", res.data.userDetails.firstname);
+      localStorage.setItem("userLastname", res.data.userDetails.lastname);
 
       console.log(res.data);
     } catch (err) {
