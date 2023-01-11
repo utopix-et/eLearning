@@ -7,6 +7,8 @@ import axios from "axios";
 import Cover from "../assets/Images/Profile/cover.jpg";
 import Avatar from "../assets/Images/Profile/yidnek.jpg";
 
+import Navbar from "../components/Navbar";
+
 
 const Profile = () => {
 
@@ -50,6 +52,8 @@ const Profile = () => {
   }, []);
 
   return (
+    <>
+    <Navbar />
     <div className="container-fluid bg-light mb-5 pb-5">
       <div
         className="row blue-gradient text-center text-white p-5 border rounded"
@@ -143,11 +147,6 @@ const Profile = () => {
           </div>
         </div>
 
-
-
-       
- 
-
         <div className="row input-row">
           <div className="col-md-10 mx-auto">
             <div className="row mx-auto">
@@ -185,7 +184,7 @@ const Profile = () => {
         **/}
       </form>
     </div>
-
+    </>
   );
 };
 
