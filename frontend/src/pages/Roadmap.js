@@ -10,10 +10,12 @@ import img5 from "../assets/Images/CourseImages/5.jpg";
 import img6 from "../assets/Images/CourseImages/6.jpg";
 
 import "../style/Courses.css";
+import Navbar from "../components/Navbar";
 
 const Roadmap = () => {
   return (
     <>
+      <Navbar />
       <div className="row Main-row p-4 mx-3">
         <div className="row">
           <h5>Course Roadmaps</h5>
