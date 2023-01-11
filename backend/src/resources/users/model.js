@@ -3,11 +3,11 @@ const mongoose = require("mongoose"),
   bcrypt = require("bcrypt"),
   SALT_ROUNDS = 10;
 const userSchema = new Schema({
-  firstName: {
+  firstname: {
     type: String,
     required: true,
   },
-  lastName: {
+  lastname: {
     type: String,
     required: true,
   },
@@ -25,13 +25,9 @@ const userSchema = new Schema({
       type: String,
       default: process.env.DEFAULT_PROFILE_PICTURE_URL,
     },
-    blogs: {
-      type: Number,
-      default: 0,
-    },
-    comments: {
-      type: Number,
-      default: 0,
+    registeredFor: {
+      type: mongoose.Types.ObjectId,
+      ref: "Courses",
     },
     joined: {
       type: Date,
