@@ -7,7 +7,8 @@ import { BsGithub } from "react-icons/bs";
 
 const Login = () => {
   let [login, setLogin] = useState(false);
-
+  let Email = localStorage.getItem("userEmail");
+  
   const [values, setValues] = useState({
     password: "",
     email: "",
@@ -32,6 +33,8 @@ const Login = () => {
       alert("you have successfully loggedin");
 
       setLogin = true;
+
+      window.location.href = "/dashboard";
 
       localStorage.setItem("Token", res.data.tokens.accessToken);
       localStorage.setItem("refreshToken", res.data.tokens.refreshToken);
@@ -93,6 +96,7 @@ const Login = () => {
                     type="text"
                     className="form-control"
                     placeholder="Email"
+                    value={Email}
                     onChange={handleChange("email")}
                   />
                 </div>

@@ -55,7 +55,7 @@ const Signup = () => {
           <button className="menu-button active">SIGN UP</button>
         </div>
         <div className="col-md-6 col-6 text-center">
-          <button className="menu-button">SIGN IN</button>
+          <a className="menu-button text-decoration-none" href='/login'>SIGN IN</a>
         </div>
       </div>
 

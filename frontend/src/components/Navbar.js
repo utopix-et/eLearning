@@ -3,6 +3,10 @@ import Logo from "../assets/Logo/logo.png";
 import "../style/Navbar.css";
 
 const Navbar = () => {
+
+  const FirstName = localStorage.getItem("userFirstname");
+  const LastName = localStorage.getItem("userLastname");
+
   return (
     <div className="container-fluid mx-auto py-3">
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -54,7 +58,7 @@ const Navbar = () => {
                   className="btn btn-primary text-white nav-link px-3 text-center"
                   href="/profile"
                 >
-                  Tinsaye Simeneh
+                  {FirstName} {LastName}
                 </a>
               </li>
               <li className="nav-item">
