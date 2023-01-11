@@ -1,23 +1,61 @@
-import React from "react";
-import Logo  from "../assets/Logo/logo.png";
+import React, { useState } from "react";
+import Logo from "../assets/Logo/logo.png";
+import axios from "axios";
 import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
 const Signup = () => {
+  const [values, setValues] = useState({
+    password: "",
+    email: "",
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const regUsers = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await axios.post(
+        "http://elearning-api.heyeman.com/users/auth/register",
+        {
+          lastname: values.lastName,
+          password: values.password,
+          firstname: values.firstName,
+          email: values.email,
+        }
+      );
+
+      alert("you have successfully Registered");
+
+        window.location.href = "/login";
+
+      localStorage.setItem("userEmail", res.data.userDetails.email);
+      localStorage.setItem("userFirstname", res.data.userDetails.firstname);
+      localStorage.setItem("userLastname", res.data.userDetails.lastname);
+
+      console.log(res.data);
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
   return (
     <div className="container-fluid mx-auto py-3">
-        <div className="row my-4">
-            <div className="col-12 col-md-12 mx-auto text-center">
-                <img src={Logo} alt="Logo" className="img-fluid" />
-            </div>
-            </div>
+      <div className="row my-4">
+        <div className="col-12 col-md-12 mx-auto text-center">
+          <img src={Logo} alt="Logo" className="img-fluid" />
+        </div>
+      </div>
       <div className="menu-row mx-auto bg-white">
         <div className="col-md-6 col-6 text-center">
           <button className="menu-button active">SIGN UP</button>
         </div>
         <div className="col-md-6 col-6 text-center">
-          <button className="menu-button">SIGN IN</button>
+          <a className="menu-button text-decoration-none" href='/login'>SIGN IN</a>
         </div>
       </div>
 
@@ -37,41 +75,52 @@ const Signup = () => {
           </div>
         </div>
         <div className="mx-auto text-center py-3 bg-white">Or</div>
-        
+
         <div className="form-row mx-auto bg-white mt-4">
           <div className="col-md-12 col-12 mx-auto">
             <div className="row mx-auto">
-              <div className="col-md-10 col-12 mx-auto">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Student ID Number (Example - ETS1242/13)"
-                />
-              </div>
-              <div className="col-md-10 col-12 mx-auto my-4">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Email"
-                />
-              </div>
+              <form onSubmit={regUsers}>
+                <div className="col-md-10 col-12 mx-auto">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="First Name"
+                    onChange={handleChange("firstName")}
+                  />
+                </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Last Name"
+                    onChange={handleChange("lastName")}
+                  />
+                </div>
 
-              <div className="col-md-10 col-12 mx-auto mb-4">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Password"
-                />
-              </div>
-            <div className="col-md-10 col-12 mx-auto mb-2">
-            <input type="file" className="form-control" />
-            </div>
+                <div className="col-md-10 col-12 mx-auto mb-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email"
+                    onChange={handleChange("email")}
+                  />
+                </div>
+                <div className="col-md-10 col-12 mx-auto">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Password"
+                    onChange={handleChange("password")}
+                  />
+                </div>
 
-              <div className="col-md-10 col-12 mx-auto my-4">
-            <button className="btn btn-primary form-control">SIGN IN</button>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <button className="btn btn-primary form-control">
+                    SIGN UP
+                  </button>
+                </div>
+              </form>
             </div>
-            </div>
-           
           </div>
         </div>
       </div>

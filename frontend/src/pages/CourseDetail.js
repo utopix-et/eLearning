@@ -7,11 +7,14 @@ import Overview from '../components/Overview'
 import Curriculum from '../components/Curriculum'
 import Instructor from '../components/Instructor'
 import Reviews from '../components/Reviews'
+import Navbar from "../components/Navbar";
 
 import { Routes, Route } from 'react-router-dom'
 
 const CourseDetail = () => {
     return (
+        <>
+        <Navbar/>
         <div>
             <div className="my-5">
             <CourseDetailTop/>
@@ -23,6 +26,7 @@ const CourseDetail = () => {
                 <Overview/>
                 </div>
         </div>
+        </>
     )
 }
 

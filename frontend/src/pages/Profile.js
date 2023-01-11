@@ -1,12 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "../style/Profile.css";
+
+import axios from "axios";
 
 import Cover from "../assets/Images/Profile/cover.jpg";
 import Avatar from "../assets/Images/Profile/yidnek.jpg";
 
+import Navbar from "../components/Navbar";
+
+
 const Profile = () => {
+
+/*  const [values, setValues] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    github: "",
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+*/
+
+  const [data, setData] = useState([]);
+  let localToken = localStorage.getItem("Token");
+  let localrefreshToken = localStorage.getItem("refreshToken");
+
+  const fetchQuotes = async () => {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localToken}`,
+        refreshToken: localrefreshToken,
+      },
+    };
+    const res = await axios.get(
+      `http://elearning-api.heyeman.com/users/me`,
+      config
+    );
+
+    console.log(res.data);
+    return res.data;
+  };
+
+  useEffect(() => {
+    fetchQuotes().then((data) => {
+      setData(data);
+    });
+  }, []);
+
   return (
+    <>
+    <Navbar/>
     <div className="container-fluid bg-light mb-5 pb-5">
       <div
         className="row blue-gradient text-center text-white p-5 border rounded"
@@ -32,108 +79,112 @@ const Profile = () => {
         <div className="col-md-3 col-6 mt-3 bg-dark text-white text-center mx-auto">
           <div className="row">
             <div className="col-md-6 col-12 border py-2">
-                Rank
-                <span className="badge bg-primary text-white ms-2">3</span>
+              Rank
+              <span className="badge bg-primary text-white ms-2">3</span>
             </div>
             <div className="col-md-6 col-12 py-2">
-                Points
-                <span className="badge bg-primary text-white ms-2">100</span>
+              Points
+              <span className="badge bg-primary text-white ms-2">100</span>
             </div>
           </div>
         </div>
       </div>
 
-
       <form>
-      <div className="row mt-5">
-        <div className="col-md-10 mx-auto">
-          <div className="row mx-auto">
-            <div className="col-md-4 mx-auto">
-              <label className="form-label">
-                Name
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="inputName"
-                placeholder="John Doe"
-                disabled
-              />
+        <div className="row mt-5">
+          <div className="col-md-10 mx-auto">
+            <div className="row mx-auto">
+              <div className="col-md-4 mx-auto">
+                <label className="form-label">First Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="inputFirstName"
+                  value={data.firstname}
+                  disabled
+                />
+              </div>
+
+              <div className="col-md-4 right-inputs mx-auto">
+                <label className="form-label">Last Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="inputLastName"
+                  value={data.lastname}
+                  disabled
+                />
+              </div>
             </div>
-
-            <div className="col-md-4 right-inputs mx-auto">
-              <label className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="inputEmail"
-                placeholder="johndoe@gmail.com"
-                disabled
-              />
+          </div>
         </div>
-        </div>
-      </div>
-      </div>
 
-      <div className="row input-row">
-        <div className="col-md-10 mx-auto">
-          <div className="row mx-auto">
-            <div className="col-md-4 mx-auto">
-              <label className="form-label">
-                Student ID
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="inputID"
-                placeholder="ETS1242/13"
-                disabled
-              />
+        <div className="row mt-5">
+          <div className="col-md-10 mx-auto">
+            <div className="row mx-auto">
+              <div className="col-md-4 mx-auto">
+                <label className="form-label">Email</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="inputEmail"
+                  value={data.email}
+                  disabled
+                />
+              </div>
+
+              <div className="col-md-4 right-inputs mx-auto">
+                <label className="form-label">Github Username</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="inputGithub"
+                  value={data.github}
+                  disabled
+                />
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div className="col-md-4 right-inputs mx-auto">
-              <label className="form-label">
-                Password
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="inputPassword"
-                placeholder="********"
-                disabled
-              />
+        <div className="row input-row">
+          <div className="col-md-10 mx-auto">
+            <div className="row mx-auto">
+            <div className="col-md-10 bg-primary text-white right-inputs mx-auto text-center">
+                <p>
+                Want to change your info's? Contact admins using Email:
+                <a href="mailto:utopixtechnologies@gmail.com" className="text-dark mx-2">
+                  utopixtechnologies@gmail.com 
+                </a>
+                or
+                <a href="https://t.me/utopixtech" className="mx-2 text-dark">
+                 @utopix 
+                </a>
+                on Telegram
+                </p>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="row input-row-2 mx-auto">
-            <div className="col-md-4 col-12">
-              <label className="form-label">
-                Github Username
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="inputGithub"
-                placeholder="john-doe"
-              />
-      </div>
-      </div>
-
-      <div className="row mb-5 mt-3 btn-row mx-auto">
-        <div className="col-md-6 text-center mx-auto">
-          <button className="btn submit-btn btn-primary" type="submit">Save</button>
+        <div className="row input-row-2 mx-auto"></div>
+{/** 
+        <div className="row mb-5 mt-3 btn-row mx-auto">
+          <div className="col-md-6 text-center mx-auto">
+            <button className="btn submit-btn btn-primary" type="submit">
+              Save
+            </button>
+          </div>
+          <div className="col-md-6 mx-auto mb-5 text-center">
+            <button className="btn submit-btn btn-secondary" type="submit">
+              Cancel
+            </button>
+          </div>
         </div>
-        <div className="col-md-6 mx-auto mb-5 text-center">
-          <button className="btn submit-btn btn-secondary" type="submit">Cancel</button>
-        </div>
-      </div>
+        **/}
       </form>
-
     </div>
+    </>
   );
 };
 
