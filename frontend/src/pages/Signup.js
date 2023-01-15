@@ -105,7 +105,7 @@ const Signup = () => {
                   />
                 </div>
                 <div className="col-md-10 col-12 mx-auto my-4">
-                  <select name="gender" id="gender" className="form-control">
+                  <select name="gender" id="gender" className="border rounded p-2 w-100">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </select>
