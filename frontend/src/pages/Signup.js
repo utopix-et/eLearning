@@ -9,6 +9,9 @@ const Signup = () => {
   const [values, setValues] = useState({
     password: "",
     email: "",
+    firstName: "",
+    lastName: "",
+    github: "",
     showPassword: false,
   });
 
@@ -26,6 +29,7 @@ const Signup = () => {
           password: values.password,
           firstname: values.firstName,
           email: values.email,
+          githubUsername: values.github
         }
       );
 
@@ -36,6 +40,7 @@ const Signup = () => {
       localStorage.setItem("userEmail", res.data.userDetails.email);
       localStorage.setItem("userFirstname", res.data.userDetails.firstname);
       localStorage.setItem("userLastname", res.data.userDetails.lastname);
+      localStorage.setItem("userGithub", res.data.userDetails.githubUsername);
 
       console.log(res.data);
     } catch (err) {
@@ -94,6 +99,14 @@ const Signup = () => {
                     className="form-control"
                     placeholder="Last Name"
                     onChange={handleChange("lastName")}
+                  />
+                </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Github Username"
+                    onChange={handleChange("githubUsername")}
                   />
                 </div>
 
