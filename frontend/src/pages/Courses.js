@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
+import axios from "axios";
 
 import Cards from "../components/CourseCard";
 
@@ -13,6 +14,35 @@ import "../style/Courses.css";
 import Navbar from "../components/Navbar";
 
 const Courses = ({LoginStat}) => {
+  const [data, setData] = useState([]);
+  let localToken = localStorage.getItem("Token");
+  let localrefreshToken = localStorage.getItem("refreshToken");
+
+
+  const fetchQuotes = async () => {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localToken}`,
+        refreshToken: localrefreshToken,
+      },
+    };
+    const res = await axios.get(
+      `http://elearning-api.heyeman.com/courses`,
+      config
+    );
+
+    console.log(res.data);
+    return res.data;
+  };
+
+  useEffect(() => {
+    fetchQuotes().then((data) => {
+      setData(data);
+    });
+  }, []);
+
+  console.log(data);
+
   return (
     (LoginStat === 'true')?
     <>
@@ -23,7 +53,7 @@ const Courses = ({LoginStat}) => {
         </div>
 
         <div className="row card-row">
-          { }
+          {/**Mapping */}
           <div className="col-md-3 col-12 custom-card">
             <Cards
               img={img1}

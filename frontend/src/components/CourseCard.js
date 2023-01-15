@@ -47,7 +47,7 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText, description, Downloadbt
                 width="30px"
                 height="30px"
               />
-              <p className="ms-2">John Doe</p>
+              <p className="ms-2">Utopix Technologies</p>
               </div>
               <div className={DownloadbtnState}>
               <a className="text-dark text-decoration-none" href="Roadmap" id="download-btn">
