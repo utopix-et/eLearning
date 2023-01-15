@@ -27,7 +27,7 @@ const Courses = ({LoginStat}) => {
       },
     };
     const res = await axios.get(
-      `http://elearning-api.heyeman.com/courses`,
+      `http://elearning-api.heyeman.com/courses/1`,
       config
     );
 
