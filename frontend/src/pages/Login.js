@@ -5,7 +5,7 @@ import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
-const Login = () => {
+const Login = ({LoginStat}) => {
   let [login, setLogin] = useState(false);
   let Email = localStorage.getItem("userEmail");
   
@@ -55,6 +55,7 @@ const Login = () => {
   };
 
   return (
+    (LoginStat === 'false')?
     <div className="container-fluid mx-auto py-3">
       <div className="row my-4">
         <div className="col-12 col-md-12 mx-auto text-center">
@@ -129,6 +130,8 @@ const Login = () => {
         </form>
       </div>
     </div>
+    :
+    window.location.href = "/Dashboard"
   );
 };
 

@@ -34,7 +34,7 @@ function App() {
             <Route path="/courses/:id" element={<CourseDetail LoginStat={LoginStatus}/>} />
             <Route path="/roadmap" element={<Roadmap LoginStat={LoginStatus}/>} />
             <Route path="*" element={<Dashboard LoginStat={LoginStatus}/>} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login LoginStat={LoginStatus}/>} />
           </Routes>
         </BrowserRouter>
         <Footer />

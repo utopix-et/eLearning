@@ -45,7 +45,7 @@ const Signup = ({LoginStat}) => {
   };
 
   return (
-    (LoginStat === 'true')?
+    (LoginStat === 'false')?
     <div className="container-fluid mx-auto py-3">
       <div className="row my-4">
         <div className="col-12 col-md-12 mx-auto text-center">
@@ -144,7 +144,7 @@ const Signup = ({LoginStat}) => {
       </div>
     </div>
     :
-    window.location.href = "/Login"
+    window.location.href = "/Dashboard"
   );
 };
 
