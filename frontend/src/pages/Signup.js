@@ -4,6 +4,7 @@ import axios from "axios";
 import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
+import {GrNext} from "react-icons/gr";
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -29,13 +30,13 @@ const Signup = () => {
           password: values.password,
           firstname: values.firstName,
           email: values.email,
-          githubUsername: values.github
+          githubUsername: values.github,
         }
       );
 
       alert("you have successfully Registered");
 
-        window.location.href = "/login";
+      window.location.href = "/login";
 
       localStorage.setItem("userEmail", res.data.userDetails.email);
       localStorage.setItem("userFirstname", res.data.userDetails.firstname);
@@ -60,7 +61,9 @@ const Signup = () => {
           <button className="menu-button active">SIGN UP</button>
         </div>
         <div className="col-md-6 col-6 text-center">
-          <a className="menu-button text-decoration-none" href='/login'>SIGN IN</a>
+          <a className="menu-button text-decoration-none" href="/login">
+            SIGN IN
+          </a>
         </div>
       </div>
 
@@ -100,6 +103,12 @@ const Signup = () => {
                     placeholder="Last Name"
                     onChange={handleChange("lastName")}
                   />
+                </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <select name="gender" id="gender" className="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
                 </div>
                 <div className="col-md-10 col-12 mx-auto my-4">
                   <input
