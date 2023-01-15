@@ -4,7 +4,6 @@ import "../style/Profile.css";
 
 import axios from "axios";
 
-import Cover from "../assets/Images/Profile/cover.jpg";
 import Avatar from "../assets/icons/avatar.svg";
 
 import Navbar from "../components/Navbar";

@@ -32,7 +32,6 @@ const Roadmap = ({LoginStat}) => {
               DownloadbtnState="d-flex"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-flex"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">

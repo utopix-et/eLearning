@@ -7,7 +7,6 @@ import { BsGithub } from "react-icons/bs";
 
 const Login = ({LoginStat}) => {
   let [login, setLogin] = useState(false);
-  let Email = localStorage.getItem("userEmail");
   
   const [values, setValues] = useState({
     password: "",
@@ -44,7 +43,7 @@ const Login = ({LoginStat}) => {
       localStorage.setItem("userLastname", res.data.userDetails.lastname);
       localStorage.setItem("userGithub", res.data.userDetails.githubUsername);
       localStorage.setItem("userGender", res.data.userDetails.gender);
-      localStorage.setItem("Login", "true");
+      localStorage.setItem("Login", login);
 
       console.log(res.data);
     } catch (err) {
