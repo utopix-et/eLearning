@@ -11,8 +11,9 @@ import Navbar from "../components/Navbar";
 
 import { Routes, Route } from 'react-router-dom'
 
-const CourseDetail = () => {
+const CourseDetail = ({LoginStat}) => {
     return (
+        (LoginStat === 'true')?
         <>
         <Navbar/>
         <div>
@@ -27,6 +28,8 @@ const CourseDetail = () => {
                 </div>
         </div>
         </>
+    :
+    window.location.href = "/Login"
     )
 }
 

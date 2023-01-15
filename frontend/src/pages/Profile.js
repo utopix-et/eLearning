@@ -10,7 +10,7 @@ import Avatar from "../assets/icons/avatar.svg";
 import Navbar from "../components/Navbar";
 
 
-const Profile = () => {
+const Profile = ({LoginStat}) => {
 
 /*  const [values, setValues] = useState({
     email: "",
@@ -28,6 +28,7 @@ const Profile = () => {
   const [data, setData] = useState([]);
   let localToken = localStorage.getItem("Token");
   let localrefreshToken = localStorage.getItem("refreshToken");
+
 
   const fetchQuotes = async () => {
     const config = {
@@ -51,7 +52,8 @@ const Profile = () => {
     });
   }, []);
 
-  return (
+  return ( 
+      (LoginStat === 'true')?
     <>
     <Navbar/>
     <div className="container-fluid bg-light mb-5 pb-5">
@@ -184,6 +186,9 @@ const Profile = () => {
       </form>
     </div>
     </>
+    :
+    window.location.href = "/Login"
+      
   );
 };
 

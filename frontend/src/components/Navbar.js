@@ -7,6 +7,10 @@ const Navbar = () => {
   const FirstName = localStorage.getItem("userFirstname");
   const LastName = localStorage.getItem("userLastname");
 
+  function handleLogout () {
+    localStorage.setItem("Login", "false");
+  }
+
   return (
     <div className="container-fluid mx-auto py-3">
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -65,6 +69,7 @@ const Navbar = () => {
                 <a
                   className="btn btn-secondary text-white nav-link px-3 text-center"
                   href="/login"
+                  onClick={handleLogout}
                 >
                   Logout
                 </a>

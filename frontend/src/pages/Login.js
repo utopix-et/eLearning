@@ -44,11 +44,13 @@ const Login = () => {
       localStorage.setItem("userLastname", res.data.userDetails.lastname);
       localStorage.setItem("userGithub", res.data.userDetails.githubUsername);
       localStorage.setItem("userGender", res.data.userDetails.gender);
+      localStorage.setItem("Login", "true");
 
       console.log(res.data);
     } catch (err) {
       setLogin = false;
       alert(err.message);
+      localStorage.setItem("Login", "false");
     }
   };
 

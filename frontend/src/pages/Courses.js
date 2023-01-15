@@ -12,8 +12,9 @@ import img6 from "../assets/Images/CourseImages/6.jpg";
 import "../style/Courses.css";
 import Navbar from "../components/Navbar";
 
-const Courses = () => {
+const Courses = ({LoginStat}) => {
   return (
+    (LoginStat === 'true')?
     <>
     <Navbar/>
       <div className="row Main-row p-4 mx-3">
@@ -119,6 +120,8 @@ const Courses = () => {
         </div>
       </div>
     </>
+    :
+    window.location.href = "/Login"
   );
 };
 

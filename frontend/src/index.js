@@ -19,21 +19,22 @@ require("jquery");
 require("bootstrap");
 
 function App() {
+  let LoginStatus = localStorage.getItem("Login");
+
   return (
     <>
-      
       <div className="container-fluid bg-light pb-5">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:id" element={<CourseDetail />} />
-            <Route path="/roadmap" element={<Roadmap />} />
-            <Route path="*" element={<Login />} />
+          <Route path="/" element={<Dashboard LoginStat={LoginStatus}/>} />
+            <Route path="/signup" element={<Signup LoginStat={LoginStatus}/>} />
+            <Route path="/dashboard" element={<Dashboard LoginStat={LoginStatus}/>} />
+            <Route path="/profile" element={<Profile LoginStat={LoginStatus}/>} />
+            <Route path="/courses" element={<Courses LoginStat={LoginStatus}/>} />
+            <Route path="/courses/:id" element={<CourseDetail LoginStat={LoginStatus}/>} />
+            <Route path="/roadmap" element={<Roadmap LoginStat={LoginStatus}/>} />
+            <Route path="*" element={<Dashboard LoginStat={LoginStatus}/>} />
+          <Route path="/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
         <Footer />

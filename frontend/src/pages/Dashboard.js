@@ -9,8 +9,9 @@ import "../style/Dashboard.css";
 import '../components/Navbar'
 import Navbar from "../components/Navbar";
 
-const Dashboard = () => {
+const Dashboard = ({LoginStat}) => {
   return (
+    (LoginStat === 'true')?
     <>
     <Navbar/>
       <div className="row text-center pb-5 pt-4">
@@ -35,6 +36,8 @@ const Dashboard = () => {
       </div>
       
     </>
+    :
+    window.location.href = "/Login"
   );
 };
 

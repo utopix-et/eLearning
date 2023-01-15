@@ -5,7 +5,7 @@ import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
-const Signup = () => {
+const Signup = ({LoginStat}) => {
   const [values, setValues] = useState({
     password: "",
     email: "",
@@ -45,6 +45,7 @@ const Signup = () => {
   };
 
   return (
+    (LoginStat === 'true')?
     <div className="container-fluid mx-auto py-3">
       <div className="row my-4">
         <div className="col-12 col-md-12 mx-auto text-center">
@@ -142,6 +143,8 @@ const Signup = () => {
         </div>
       </div>
     </div>
+    :
+    window.location.href = "/Login"
   );
 };
 
