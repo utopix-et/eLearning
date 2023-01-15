@@ -4,7 +4,6 @@ import axios from "axios";
 import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import {GrNext} from "react-icons/gr";
 
 const Signup = () => {
   const [values, setValues] = useState({
