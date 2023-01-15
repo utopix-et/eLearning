@@ -20,7 +20,7 @@ require("bootstrap");
 
 function App() {
   let LoginStatus = localStorage.getItem("Login");
-
+console.log(LoginStatus);
   return (
     <>
       <div className="container-fluid bg-light pb-5">

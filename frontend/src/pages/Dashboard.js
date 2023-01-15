@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar";
 
 const Dashboard = ({LoginStat}) => {
   return (
-    (LoginStat === 'true')?
+    (LoginStat === "true")?
     <>
     <Navbar/>
       <div className="row text-center pb-5 pt-4">
