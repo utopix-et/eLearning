@@ -13,6 +13,7 @@ const Signup = () => {
     firstName: "",
     lastName: "",
     github: "",
+    gender: "Male",
     showPassword: false,
   });
 
@@ -31,6 +32,7 @@ const Signup = () => {
           firstname: values.firstName,
           email: values.email,
           githubUsername: values.github,
+          gender: values.gender,
         }
       );
 
@@ -42,7 +44,7 @@ const Signup = () => {
       localStorage.setItem("userFirstname", res.data.userDetails.firstname);
       localStorage.setItem("userLastname", res.data.userDetails.lastname);
       localStorage.setItem("userGithub", res.data.userDetails.githubUsername);
-
+      localStorage.setItem("userGender", res.data.userDetails.gender);
       console.log(res.data);
     } catch (err) {
       alert(err.message);
@@ -105,7 +107,7 @@ const Signup = () => {
                   />
                 </div>
                 <div className="col-md-10 col-12 mx-auto my-4">
-                  <select name="gender" id="gender" className="border rounded p-2 w-100">
+                  <select name="gender" id="gender" className="border rounded p-2 w-100" onChange={handleChange("gender")}>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </select>
