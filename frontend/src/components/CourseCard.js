@@ -5,6 +5,7 @@ import {BsFillTriangleFill} from 'react-icons/bs';
 import {AiOutlineDownload} from 'react-icons/ai';
 
 import Yidnek from "../assets/Images/Instructer/yidnek.jpg";
+import utopix from "../assets/Images/Instructer/utopix.png";
 
 import "../style/Courses.css";
 const CourseCards = ({ img, levelIcon, Title, BadgeText, description, DownloadbtnState }) => {
@@ -40,14 +41,14 @@ const CourseCards = ({ img, levelIcon, Title, BadgeText, description, Downloadbt
           </p>
           <div className="d-flex justify-content-between">
             <div className="d-flex">
+              
+            <p>Prepared By:</p>
               <img
-                src={Yidnek}
-                className="rounded-circle"
+                src={utopix}
                 alt="profile-img"
-                width="30px"
+                width="150px"
                 height="30px"
               />
-              <p className="ms-2">Utopix Technologies</p>
               </div>
               <div className={DownloadbtnState}>
               <a className="text-dark text-decoration-none" href="Roadmap" id="download-btn">
