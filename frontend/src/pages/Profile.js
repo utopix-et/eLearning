@@ -54,7 +54,7 @@ const Profile = ({LoginStat}) => {
   return ( 
       (LoginStat === 'true')?
     <>
-    <Navbar roadmap="active"/>
+    <Navbar profile="active"/>
     <div className="container-fluid bg-light mb-5 pb-5">
       <div
         className="row blue-gradient text-center text-white p-5 border rounded"
