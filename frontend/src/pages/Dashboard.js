@@ -13,7 +13,7 @@ const Dashboard = ({LoginStat}) => {
   return (
     (LoginStat === "true")?
     <>
-    <Navbar dashboard="active"/>
+    <Navbar/>
       <div className="row text-center pb-5 pt-4">
         <h3>Dashboard</h3>
       </div>

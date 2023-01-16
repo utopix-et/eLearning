@@ -17,7 +17,7 @@ const Roadmap = ({LoginStat}) => {
   return (
     (LoginStat === 'true')?
     <>
-      <Navbar roadmap="active"/>
+      <Navbar/>
       <div className="row Main-row p-4 mx-3">
         <div className="row">
           <h5>Course Roadmaps</h5>
