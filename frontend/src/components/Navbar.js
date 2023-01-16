@@ -34,7 +34,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <a
-                  className="nav-link active"
+                  className="nav-link"
                   aria-current="page"
                   href="/dashboard"
                 >
@@ -44,7 +44,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <a 
                 className="nav-link"
-                href="/courses">
+                href="/courses"
+                >
                   Courses
                 </a>
               </li>
@@ -54,7 +55,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/assessment">
+                <a className="nav-link" href="/quiz">
                   Assessment
                 </a>
               </li>
