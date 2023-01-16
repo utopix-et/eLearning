@@ -1,11 +1,16 @@
 import React from "react";
 import Logo from "../assets/Logo/logo.png";
 import "../style/Navbar.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
 
   const FirstName = localStorage.getItem("userFirstname");
   const LastName = localStorage.getItem("userLastname");
+
+  function handleLogout () {
+    localStorage.setItem("Login", "false");
+  }
 
   return (
     <div className="container-fluid mx-auto py-3">
@@ -29,7 +34,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <a
-                  className="nav-link active"
+                  className="nav-link"
                   aria-current="page"
                   href="/dashboard"
                 >
@@ -37,7 +42,10 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/courses">
+                <a 
+                className="nav-link"
+                href="/courses"
+                >
                   Courses
                 </a>
               </li>
@@ -47,7 +55,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/assessment">
+                <a className="nav-link" href="/quiz">
                   Assessment
                 </a>
               </li>
@@ -65,6 +73,7 @@ const Navbar = () => {
                 <a
                   className="btn btn-secondary text-white nav-link px-3 text-center"
                   href="/login"
+                  onClick={handleLogout}
                 >
                   Logout
                 </a>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Cards from "../components/CourseCard";
+import Cards from "../components/roadmapCard";
 
 import img1 from "../assets/Images/CourseImages/1.jpg";
 import img2 from "../assets/Images/CourseImages/2.jpg";
@@ -12,10 +12,10 @@ import img6 from "../assets/Images/CourseImages/6.jpg";
 import "../style/Courses.css";
 import Navbar from "../components/Navbar";
 
-const Roadmap = () => {
-  return (
+const Roadmap = ({ LoginStat }) => {
+  return LoginStat === "true" ? (
     <>
-      <Navbar />
+      <Navbar/>
       <div className="row Main-row p-4 mx-3">
         <div className="row">
           <h5>Course Roadmaps</h5>
@@ -30,7 +30,7 @@ const Roadmap = () => {
               DownloadbtnState="d-flex"
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
-              DownloadbtnState="d-flex"
+              fileLink="https://docs.google.com/document/d/1soj1zvGHZ0xu0DYtlJwbzZ9EVcLoOMRludqdez1MAtk/edit?usp=sharing"
             />
           </div>
           <div className="col-md-3 col-12 custom-card">
@@ -86,7 +86,7 @@ const Roadmap = () => {
               description="Some quick example text to build on the card title and make up the
               bulk of the card's content."
               DownloadbtnState="d-none"
-                          />
+            />
           </div>
           <div className="col-md-3 col-12 custom-card">
             <Cards
@@ -111,9 +111,10 @@ const Roadmap = () => {
             />
           </div>
         </div>
-
       </div>
     </>
+  ) : (
+    (window.location.href = "/Login")
   );
 };
 

@@ -5,9 +5,8 @@ import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
-const Login = () => {
+const Login = ({LoginStat}) => {
   let [login, setLogin] = useState(false);
-  let Email = localStorage.getItem("userEmail");
   
   const [values, setValues] = useState({
     password: "",
@@ -42,15 +41,20 @@ const Login = () => {
       localStorage.setItem("userEmail", res.data.userDetails.email);
       localStorage.setItem("userFirstname", res.data.userDetails.firstname);
       localStorage.setItem("userLastname", res.data.userDetails.lastname);
+      localStorage.setItem("userGithub", res.data.userDetails.githubUsername);
+      localStorage.setItem("userGender", res.data.userDetails.gender);
+      localStorage.setItem("Login", "true");
 
       console.log(res.data);
     } catch (err) {
       setLogin = false;
       alert(err.message);
+      localStorage.setItem("Login", "false");
     }
   };
 
   return (
+    (LoginStat === 'false')?
     <div className="container-fluid mx-auto py-3">
       <div className="row my-4">
         <div className="col-12 col-md-12 mx-auto text-center">
@@ -125,6 +129,8 @@ const Login = () => {
         </form>
       </div>
     </div>
+    :
+    window.location.href = "/Dashboard"
   );
 };
 

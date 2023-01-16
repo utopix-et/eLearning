@@ -6,7 +6,7 @@ import { IoMdTime } from "react-icons/io";
 import {BiDollarCircle} from 'react-icons/bi';
 import {AiOutlineDownload} from 'react-icons/ai';
 
-import Yidnek from "../assets/Images/Instructer/yidnek.jpg";
+import utopix from "../assets/Images/Instructer/utopix.png";
 
 const CourseDetailTop = () => {
   return (
@@ -22,13 +22,11 @@ const CourseDetailTop = () => {
           <div className="d-flex justify-content-between mt-4">
             <div className="d-flex">
               <img
-                src={Yidnek}
-                className="rounded-circle"
+                src={utopix}
                 alt="profile-img"
-                width="30px"
+                width="150px"
                 height="30px"
               />
-              <p className="ms-2 text-white">John Doe</p>
             </div>
           </div>
         </div>

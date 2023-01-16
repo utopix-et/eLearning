@@ -4,13 +4,12 @@ import "../style/Profile.css";
 
 import axios from "axios";
 
-import Cover from "../assets/Images/Profile/cover.jpg";
-import Avatar from "../assets/Images/Profile/yidnek.jpg";
+import Avatar from "../assets/icons/avatar.svg";
 
 import Navbar from "../components/Navbar";
 
 
-const Profile = () => {
+const Profile = ({LoginStat}) => {
 
 /*  const [values, setValues] = useState({
     email: "",
@@ -28,6 +27,7 @@ const Profile = () => {
   const [data, setData] = useState([]);
   let localToken = localStorage.getItem("Token");
   let localrefreshToken = localStorage.getItem("refreshToken");
+
 
   const fetchQuotes = async () => {
     const config = {
@@ -51,7 +51,8 @@ const Profile = () => {
     });
   }, []);
 
-  return (
+  return ( 
+      (LoginStat === 'true')?
     <>
     <Navbar/>
     <div className="container-fluid bg-light mb-5 pb-5">
@@ -69,14 +70,13 @@ const Profile = () => {
         </div>
         <div className="col-md-12 col-12 mt-4 text-center">
           <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            className="rounded-circle text-center mx-auto d-block pb-1"
+            src={Avatar}
+            className="rounded-circle text-center mx-auto d-block pb-1 border"
             style={{ width: "5.5rem" }}
             alt="Avatar"
           />
-          <span className="text-decoration-underline">Edit</span>
         </div>
-        <div className="col-md-3 col-6 mt-3 bg-dark text-white text-center mx-auto">
+        <div className="col-md-3 col-6 mt-5 bg-dark text-white text-center mx-auto">
           <div className="row">
             <div className="col-md-6 col-12 border py-2">
               Rank
@@ -185,6 +185,9 @@ const Profile = () => {
       </form>
     </div>
     </>
+    :
+    window.location.href = "/Login"
+      
   );
 };
 

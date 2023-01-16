@@ -2,6 +2,7 @@ import React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
 import { WiMoonWaningCrescent1 } from "react-icons/wi";
 import { BsFillTriangleFill } from "react-icons/bs";
+import { AiOutlineDownload } from "react-icons/ai";
 
 import utopix from "../assets/Images/Instructer/utopix.png";
 
@@ -53,6 +54,18 @@ const CourseCards = ({
           <div className="d-flex justify-content-between">
             <div className="d-flex">
               <img src={utopix} alt="profile-img" width="150px" height="30px" />
+            </div>
+            <div className={DownloadbtnState} class="mt-1">
+              <a
+                className="text-dark text-decoration-none"
+                href={fileLink}
+                alt="download"
+                target="_blank"
+                id="download-btn"
+              >
+                <AiOutlineDownload className="text-primary me-1" />
+                Download
+              </a>
             </div>
           </div>
         </div>

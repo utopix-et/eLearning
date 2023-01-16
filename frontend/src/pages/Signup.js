@@ -5,10 +5,14 @@ import "../style/Account.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 
-const Signup = () => {
+const Signup = ({LoginStat}) => {
   const [values, setValues] = useState({
     password: "",
     email: "",
+    firstName: "",
+    lastName: "",
+    github: "",
+    gender: "Male",
     showPassword: false,
   });
 
@@ -26,17 +30,14 @@ const Signup = () => {
           password: values.password,
           firstname: values.firstName,
           email: values.email,
+          githubUsername: values.github,
+          gender: values.gender,
         }
       );
 
       alert("you have successfully Registered");
 
-        window.location.href = "/login";
-
-      localStorage.setItem("userEmail", res.data.userDetails.email);
-      localStorage.setItem("userFirstname", res.data.userDetails.firstname);
-      localStorage.setItem("userLastname", res.data.userDetails.lastname);
-
+      window.location.href = "/login";
       console.log(res.data);
     } catch (err) {
       alert(err.message);
@@ -44,6 +45,7 @@ const Signup = () => {
   };
 
   return (
+    (LoginStat === 'false')?
     <div className="container-fluid mx-auto py-3">
       <div className="row my-4">
         <div className="col-12 col-md-12 mx-auto text-center">
@@ -55,7 +57,9 @@ const Signup = () => {
           <button className="menu-button active">SIGN UP</button>
         </div>
         <div className="col-md-6 col-6 text-center">
-          <a className="menu-button text-decoration-none" href='/login'>SIGN IN</a>
+          <a className="menu-button text-decoration-none" href="/login">
+            SIGN IN
+          </a>
         </div>
       </div>
 
@@ -96,6 +100,20 @@ const Signup = () => {
                     onChange={handleChange("lastName")}
                   />
                 </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <select name="gender" id="gender" className="border rounded p-2 w-100" onChange={handleChange("gender")}>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div className="col-md-10 col-12 mx-auto my-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Github Username"
+                    onChange={handleChange("githubUsername")}
+                  />
+                </div>
 
                 <div className="col-md-10 col-12 mx-auto mb-4">
                   <input
@@ -125,6 +143,8 @@ const Signup = () => {
         </div>
       </div>
     </div>
+    :
+    window.location.href = "/Dashboard"
   );
 };
 
