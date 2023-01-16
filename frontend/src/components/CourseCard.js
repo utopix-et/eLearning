@@ -4,7 +4,6 @@ import { WiMoonWaningCrescent1 } from "react-icons/wi";
 import {BsFillTriangleFill} from 'react-icons/bs';
 import {AiOutlineDownload} from 'react-icons/ai';
 
-import Yidnek from "../assets/Images/Instructer/yidnek.jpg";
 import utopix from "../assets/Images/Instructer/utopix.png";
 
 import "../style/Courses.css";
