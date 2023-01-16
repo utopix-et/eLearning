@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../assets/Logo/logo.png";
 import "../style/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({dashboard, roadmap, course, quiz}) => {
 
   const FirstName = localStorage.getItem("userFirstname");
   const LastName = localStorage.getItem("userLastname");
@@ -33,7 +33,8 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <a
-                  className="nav-link active"
+                  className="nav-link"
+                  class={dashboard}
                   aria-current="page"
                   href="/dashboard"
                 >
@@ -41,17 +42,17 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/courses">
+                <a className="nav-link" class={course} href="/courses">
                   Courses
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/roadmap">
+                <a className="nav-link" class={roadmap} href="/roadmap">
                   Roadmaps
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/assessment">
+                <a className="nav-link" class={quiz} href="/assessment">
                   Assessment
                 </a>
               </li>

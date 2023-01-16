@@ -46,7 +46,7 @@ const Courses = ({LoginStat}) => {
   return (
     (LoginStat === 'true')?
     <>
-    <Navbar/>
+    <Navbar course="active"/>
       <div className="row Main-row p-4 mx-3">
         <div className="row">
           <h5>Programming Courses</h5>
