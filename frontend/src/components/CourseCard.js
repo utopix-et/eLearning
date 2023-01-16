@@ -14,6 +14,7 @@ const CourseCards = ({
   BadgeText,
   description,
   DownloadbtnState,
+  fileLink,
 }) => {
   if (!img) {
     return <h1>Image not found</h1>;
@@ -57,7 +58,9 @@ const CourseCards = ({
             <div className={DownloadbtnState} class="mt-1">
               <a
                 className="text-dark text-decoration-none"
-                href="Roadmap"
+                href={fileLink}
+                alt="download"
+                target="_blank"
                 id="download-btn"
               >
                 <AiOutlineDownload className="text-primary me-1" />
