@@ -6,6 +6,8 @@ import Cards from "../components/CourseCard";
 import "../style/Courses.css";
 import Navbar from "../components/Navbar";
 
+import img1 from "../assets/Images/CourseImages/1.jpg";
+
 const Courses = ({LoginStat}) => {
   const [data, setData] = useState([]);
   let localToken = localStorage.getItem("Token");
