@@ -37,6 +37,7 @@ console.log(LoginStatus);
           <Route path="/login" element={<Login LoginStat={LoginStatus}/>} />
           </Routes>
         </BrowserRouter>
+
         <Footer />
       </div>
     </>
